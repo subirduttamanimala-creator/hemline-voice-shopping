@@ -49,7 +49,7 @@ export function interpret(message, previous = {}) {
     preferences.size = names[size[1]] || size[1].toUpperCase();
     understood = true;
   }
-  const budget = query.match(/(?:\b(?:under|below|up to|at most|max(?:imum)?|budget(?: of| is)?)\s*[:=]?\s*(?:₹|rs\.?|inr|rupees)?\s*|(?:₹|\brs\.?|\binr)\s*)(\d[\d,]*(?:\.\d+)?)(?:\s*(k|thousand)\b)?/);
+  const budget = query.match(/(?:\b(?:under|below|up to|at most|max(?:imum)?|budget(?: of| is| to)?)\s*[:=]?\s*(?:₹|rs\.?|inr|rupees)?\s*|(?:₹|\brs\.?|\binr)\s*)(\d[\d,]*(?:\.\d+)?)(?:\s*(k|thousand)\b)?/);
   if (/\b(no budget|any price)\b/.test(query)) {
     delete preferences.budget;
     understood = true;

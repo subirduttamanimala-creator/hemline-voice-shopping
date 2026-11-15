@@ -91,11 +91,35 @@ function submit(text) {
   if (!filters(preferences).length) {
     message('Here’s the full catalogue. What would you like to find?');
   } else if (!results.length) {
-    message('Nothing matches those preferences. Try a higher budget, say “any colour”, or reset to start a new search.');
+    message(noMatchReply());
   } else {
     const best = results[0];
     message('I found '+results.length+' '+(results.length === 1 ? 'piece' : 'pieces')+'. Start with the '+best.name+' at '+rupees(best.price)+'. It has '+best.detail+'.');
   }
+}
+
+function noMatchReply() {
+  const options = {
+    budget: 'any price',
+    color: 'any colour',
+    size: 'any size',
+    category: 'any category',
+    occasion: 'any occasion'
+  };
+  for (const [key, phrase] of Object.entries(options)) {
+    if (!(key in preferences)) continue;
+    const relaxed = {...preferences};
+    delete relaxed[key];
+    const alternatives = match(relaxed);
+    if (alternatives.length) {
+      const item = alternatives[0];
+      if (key === 'budget') {
+        return 'Nothing fits all those preferences at that budget. The lowest priced match for everything else is the '+item.name+' at '+rupees(item.price)+'.';
+      }
+      return 'Nothing matches all those preferences. Try “'+phrase+'” to see '+alternatives.length+' '+(alternatives.length === 1 ? 'option' : 'options')+'.';
+    }
+  }
+  return 'Nothing matches all those preferences. Change more than one preference, or reset to start a new search.';
 }
 
 function renderBag() {

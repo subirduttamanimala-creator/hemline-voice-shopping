@@ -20,6 +20,8 @@ Open http://localhost:8000 in your browser. The project uses HTML, CSS and JavaS
 
 On a supported browser, choose **Speak** and allow microphone access. Choose **Read replies aloud** to hear the stylist. If the microphone or speech service is unavailable, type the same requests in the chat box. Use an HTTPS URL for hosted demos. Speech recognition depends on the browser, which may process microphone audio through its own service. Hemline has no application backend and keeps the conversation and bag in memory until the page reloads. [Browser speech documentation](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition)
 
+See the [project walkthrough](PROJECT-WALKTHROUGH.md) for the implementation and a classroom explanation.
+
 ## Classroom demo
 
 1. Say or type **“Interview under ₹2,000, size M.”** The catalogue shows matching pieces with the budget and size visible.
@@ -34,6 +36,6 @@ To evaluate the idea in class, ask participants to find the same garment once wi
 - `dist/index.html` and `dist/style.css` contain the storefront and responsive layout.
 - `dist/matcher.mjs` contains the sample catalogue and intent matching logic.
 - `dist/app.mjs` handles the conversation, speech controls, and demo bag.
-- `dist/hero.jpg` and `dist/catalogue/` contain AI-generated imagery for the sample storefront.
+- `dist/cover.jpg` and `dist/catalogue/` contain AI-generated imagery for the sample storefront.
 
 The sample catalogue assumes fixed size availability and unit prices in rupees. Hemline accepts a supported English vocabulary and one active value per filter. Checkout is a simulation. A production version would need a live inventory and checkout integration.
