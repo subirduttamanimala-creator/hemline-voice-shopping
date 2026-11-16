@@ -40,7 +40,7 @@
           <label>Garment or outfit<input name="garment" maxlength="120" placeholder="Suit"></label>
           <label>Colour<input name="color" maxlength="40" placeholder="Navy blue"></label>
           <label>Size<input name="size" maxlength="20" placeholder="M or 40"></label>
-          <label>Budget (₹)<input name="budget" type="number" min="1" max="10000000" step="1" placeholder="5,000"></label>
+          <label>Target budget (₹)<input name="budget" type="number" min="1" max="10000000" step="1" placeholder="5,000"><span id="price-range" class="range-label" aria-live="polite"></span></label>
           <label>Shop for<input name="audience" maxlength="30" placeholder="Men, women or unisex"></label>
         </div>
         <div class="search-actions"><button type="submit" class="primary">Find shopping options <span aria-hidden="true">↗</span></button></div>
@@ -48,7 +48,10 @@
     </section>
     <section id="results" class="results" aria-labelledby="results-title" hidden>
       <h2 id="results-title" tabindex="-1">Shopping results</h2>
+      <h3 id="ranked-title">Top reviewed picks</h3>
       <p id="result-status" class="status" role="status"></p>
+      <ol id="ranked-list" class="product-grid" aria-labelledby="ranked-title"></ol>
+      <h3>Search by retailer</h3>
       <div id="result-list"></div>
     </section>
   </main>

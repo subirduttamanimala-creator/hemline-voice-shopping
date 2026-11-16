@@ -76,10 +76,10 @@ export function searchTerms(fields) {
   });
 }
 
-export function retailerSearches(query, budget) {
+export function retailerSearches(query, range) {
   const term = encodeURIComponent(query);
   const google = new URL('https://www.google.com/search');
-  google.search = new URLSearchParams({udm:'28',gl:'in',hl:'en',q:query+(budget > 0 ? ' under ₹'+budget : '')});
+  google.search = new URLSearchParams({udm:'28',gl:'in',hl:'en',q:query+(range ? ' ₹'+range.min+' to ₹'+range.max : '')});
   return [
     {name:'Google Shopping',initial:'G',url:google.href},
     {name:'Amazon India',initial:'a',url:'https://www.amazon.in/s?k='+term},

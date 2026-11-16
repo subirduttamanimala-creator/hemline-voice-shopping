@@ -33,7 +33,8 @@ function productUrl(value) {
 }
 
 function positiveNumber(value) {
-  return Number.isFinite(value) && value >= 0 ? value : undefined;
+  const number = typeof value === 'string' && /^[\d,.]+$/.test(value) ? Number(value.replaceAll(',','')) : value;
+  return Number.isFinite(number) && number >= 0 ? number : undefined;
 }
 
 function rupeePrice(value) {
@@ -61,46 +62,42 @@ async function providerSearch(parameters, key, signal) {
   return response.json();
 }
 
-async function liveProducts(query, budget, key) {
-  const signal = AbortSignal.timeout(8500);
-  const response = await providerSearch({engine:'google_shopping',q:query,gl:'in',hl:'en',google_domain:'google.co.in'},key,signal);
-  const results = Array.isArray(response.shopping_results) ? response.shopping_results.slice(0,16) : [];
+async function liveProducts(query, range, key) {
+  const signal = AbortSignal.timeout(15000);
+  const parameters = {engine:'google_shopping',q:query,gl:'in',hl:'en',google_domain:'google.co.in'};
+  if (range) Object.assign(parameters,{min_price:String(range.min),max_price:String(range.max)});
+  const response = await providerSearch(parameters,key,signal);
+  if (response.error) throw new Error('Shopping provider returned an error');
+  const results = Array.isArray(response.shopping_results) ? response.shopping_results : [];
   const direct = results.map(item => makeCard(item)).filter(Boolean);
-  const unresolved = results.filter(item => !makeCard(item) && item.immersive_product_page_token);
-  const selected = direct.length < 6 ? unresolved.slice(0,3) : [];
+  const reviewed = rankProducts(direct,range);
+  const unresolved = results.filter(item => !makeCard(item) && item.immersive_product_page_token)
+    .map(item => ({...item,url:item.immersive_product_page_token,rating:positiveNumber(item.rating),reviews:positiveNumber(item.reviews)}));
+  // Prioritize well-reviewed records before spending lookups on their retailer offers.
+  const selected = rankProducts(unresolved,null,Math.min(25,Math.max(8,resultLimit-reviewed.length)));
   const offers = await Promise.allSettled(selected.map(async item => {
     const data = await providerSearch({engine:'google_immersive_product',page_token:item.immersive_product_page_token},key,signal);
     const stores = data.product_results?.stores ?? [];
     return stores.map(store => makeCard(item,store)).filter(Boolean);
   }));
-  const cards = [...direct,...offers.flatMap(result => result.status === 'fulfilled' ? result.value : [])];
-  const seen = new Set();
-  const unique = cards.filter(card => {
-    if (seen.has(card.url)) return false;
-    seen.add(card.url);
-    return true;
-  });
-  if (budget > 0) {
-    const rank = card => card.price === undefined ? 1 : card.price <= budget ? 0 : 2;
-    unique.sort((a,b) => rank(a)-rank(b));
-  }
-  return unique.slice(0,12);
+  return rankProducts([...direct,...offers.flatMap(result => result.status === 'fulfilled' ? result.value : [])],range);
 }
 
 async function products(request, url, env, context) {
   const query = (url.searchParams.get('q') ?? '').trim().replace(/\s+/g,' ');
   if (!query || query.length > 180) return Response.json({products:[]},{status:400});
-  if (!env.SERPAPI_API_KEY) return Response.json({products:[]});
+  if (!env.SERPAPI_API_KEY) return Response.json({products:[],status:'unconfigured'});
   const requestedBudget = Number(url.searchParams.get('budget'));
-  const budget = Number.isFinite(requestedBudget) && requestedBudget > 0 && requestedBudget <= 10000000 ? requestedBudget : 0;
+  const pieceCount = Number(url.searchParams.get('pieces'));
+  const range = priceWindow(requestedBudget,Number.isInteger(pieceCount) && pieceCount >= 1 && pieceCount <= 4 ? pieceCount : 1);
   const cacheUrl = new URL('/api/products',url.origin);
-  cacheUrl.search = new URLSearchParams({q:query.toLowerCase(),budget:String(budget)});
+  cacheUrl.search = new URLSearchParams({q:query.toLowerCase(),min:String(range?.min ?? ''),max:String(range?.max ?? '')});
   const cacheKey = new Request(cacheUrl);
   const cached = await caches.default.match(cacheKey);
   if (cached) return cached;
   try {
-    const results = await liveProducts(query,budget,env.SERPAPI_API_KEY);
-    const response = Response.json({products:results},{headers:{'cache-control':'public, max-age=600'}});
+    const results = await liveProducts(query,range,env.SERPAPI_API_KEY);
+    const response = Response.json({products:results,status:'ok'},{headers:{'cache-control':'public, max-age=600'}});
     context.waitUntil(caches.default.put(cacheKey,response.clone()).catch(() => {}));
     return response;
   } catch {

@@ -1,4 +1,5 @@
 import {readRequest, searchTerms, retailerSearches} from './search.mjs';
+import {priceWindow,rankProducts,resultLimit} from './ranking.mjs';
 import {setupVoice} from './voice.mjs';
 
 const byId = id => document.getElementById(id);
@@ -8,10 +9,22 @@ const mic = byId('mic');
 const voiceStatus = byId('voice-status');
 const resultStatus = byId('result-status');
 const resultList = byId('result-list');
+const rankedList = byId('ranked-list');
 const fields = Object.fromEntries([...form.elements].filter(item => item.name).map(item => [item.name,item]));
 const currency = new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0});
 let parsedText = '';
 let activeSearch;
+
+function showPriceRange() {
+  const pieces = Math.max(1,searchTerms({garment:fields.garment.value}).length);
+  const range = priceWindow(Number(fields.budget.value),pieces);
+  byId('price-range').textContent = range
+    ? currency.format(range.min)+'–'+currency.format(range.max)+(pieces > 1 ? ' per piece' : ' search range')
+    : '';
+}
+
+fields.budget.addEventListener('input',showPriceRange);
+fields.garment.addEventListener('input',showPriceRange);
 
 function element(tag, text = '', className = '') {
   const node = document.createElement(tag);
@@ -28,6 +41,7 @@ function fillDetails(text) {
   for (const [key,value] of Object.entries(details)) {
     if (value !== undefined) fields[key].value = value;
   }
+  showPriceRange();
   parsedText = cleaned;
   return recognized;
 }
@@ -46,8 +60,10 @@ function productLink(url, className) {
   return link;
 }
 
-function renderProduct(product, budget) {
+function renderProduct(product, index) {
+  const item = element('li','','ranked-item');
   const link = productLink(product.url,'product');
+  link.append(element('span',String(index+1),'rank-number'));
   if (product.image) {
     const photo = element('img');
     photo.src = product.image;
@@ -62,7 +78,7 @@ function renderProduct(product, budget) {
   const body = element('div','','product-body');
   body.append(element('span',product.retailer+' ↗','merchant'),element('strong',product.title));
   const price = Number.isFinite(product.price) ? currency.format(product.price) : 'Check price';
-  body.append(element('span',price+(budget && product.price > budget ? ' · Over budget' : '')));
+  body.append(element('span',price));
   if (Number.isFinite(product.rating)) {
     const count = Number.isFinite(product.reviews) ? ' · '+product.reviews.toLocaleString('en-IN')+' ratings' : '';
     body.append(element('span','★ '+product.rating+count,'merchant'));
@@ -70,16 +86,15 @@ function renderProduct(product, budget) {
     body.append(element('span','See reviews on retailer site','merchant'));
   }
   link.append(body);
-  return link;
+  item.append(link);
+  return item;
 }
 
-function makeSection(query, budget) {
+function makeSection(query, range) {
   const section = element('section','','result-group');
   section.append(element('h3',query));
-  const products = element('div','','product-grid');
-  section.append(products);
   const links = element('div','','retailer-grid');
-  for (const {name,initial,url} of retailerSearches(query,budget)) {
+  for (const {name,initial,url} of retailerSearches(query,range)) {
     const link = productLink(url,'retailer');
     const mark = element('span',initial,'retailer-mark');
     mark.setAttribute('aria-hidden','true');
@@ -89,19 +104,18 @@ function makeSection(query, budget) {
   }
   section.append(links);
   resultList.append(section);
-  return products;
 }
 
-async function getListings(query, budget, signal) {
+async function getListings(query, budget, pieces, signal) {
   try {
     const url = new URL('./api/products',location.href);
-    url.search = new URLSearchParams({q:query,budget:budget || ''});
+    url.search = new URLSearchParams({q:query,budget:budget || '',pieces});
     const response = await fetch(url,{signal});
-    if (!response.ok) return [];
+    if (!response.ok) return {products:[],status:'unavailable'};
     const body = await response.json();
-    return Array.isArray(body.products) ? body.products : [];
+    return {products:Array.isArray(body.products) ? body.products : [],status:body.status};
   } catch {
-    return [];
+    return {products:[],status:'unavailable'};
   }
 }
 
@@ -120,21 +134,30 @@ form.addEventListener('submit', async event => {
   const terms = searchTerms(details);
   if (!terms.length) return;
   const budget = Number(details.budget);
-  const perPiece = terms.length === 1 ? budget : 0;
+  const range = priceWindow(budget,terms.length);
   activeSearch?.abort();
   const search = new AbortController();
   activeSearch = search;
   resultList.replaceChildren();
+  rankedList.replaceChildren();
   byId('results').hidden = false;
   resultStatus.textContent = 'Looking for product listings. You can also open a store search below.';
   byId('results-title').focus();
-  const sections = terms.map(query => makeSection(query,perPiece));
-  const listings = await Promise.all(terms.map(term => getListings(term,perPiece,search.signal)));
+  for (const query of terms) makeSection(query,range);
+  const listings = await Promise.all(terms.map(term => getListings(term,budget,terms.length,search.signal)));
   if (search.signal.aborted) return;
-  listings.forEach((items,index) => sections[index].append(...items.map(item => renderProduct(item,perPiece))));
-  resultStatus.textContent = listings.some(items => items.length)
-    ? 'Open a product to check the current price, size and reviews.'+(terms.length > 1 && budget > 0 ? ' Check the combined price against your '+currency.format(budget)+' budget.' : '')
-    : 'Open Google Shopping or a retailer to see current products, prices and reviews.';
+  const products = rankProducts(listings.flatMap(entry => entry.products),range);
+  rankedList.append(...products.map(renderProduct));
+  const rangeText = range ? currency.format(range.min)+'–'+currency.format(range.max)+(terms.length > 1 ? ' per piece. ' : '. ') : '';
+  if (products.length) {
+    resultStatus.textContent = rangeText+'Showing '+products.length+' of up to '+resultLimit+' picks, ranked by rating and number of reviews. Confirm size availability with the retailer.';
+  } else if (listings.every(entry => entry.status === 'unconfigured')) {
+    resultStatus.textContent = rangeText+'On-site product listings require a connected shopping provider. Use the retailer searches below for current options.';
+  } else if (listings.some(entry => entry.status === 'ok')) {
+    resultStatus.textContent = rangeText+'No reviewed products matched this search. Try a different target budget or open a retailer below.';
+  } else {
+    resultStatus.textContent = rangeText+'Product results are temporarily unavailable. Use the retailer searches below.';
+  }
 });
 
 byId('clear').addEventListener('click', () => {
@@ -143,8 +166,10 @@ byId('clear').addEventListener('click', () => {
   parsedText = '';
   request.value = '';
   form.reset();
+  showPriceRange();
   voiceStatus.textContent = '';
   resultList.replaceChildren();
+  rankedList.replaceChildren();
   byId('results').hidden = true;
   request.focus();
 });

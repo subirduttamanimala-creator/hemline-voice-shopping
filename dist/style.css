@@ -41,6 +41,12 @@ label{display:block;font-size:.88rem;font-weight:600}
 .retailer-grid,.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:9px}
 .product-grid{margin-bottom:12px}
 .product-grid:empty{display:none}
+.product-grid{list-style:none;padding:0}
+.ranked-item{min-width:0}
+.ranked-item .product{display:block;position:relative;height:100%}
+.rank-number{position:absolute;top:8px;left:8px;min-width:1.65rem;padding:.25rem .35rem;text-align:center;border-radius:6px;background:#fff;color:#242953;font-size:.8rem;font-weight:700}
+.range-label{display:block;margin-top:4px;font-size:.78rem;font-weight:500;color:#484b62}
+.range-label:empty{display:none}
 .retailer,.product{border:1px solid var(--line);border-radius:11px;text-decoration:none;background:#fff}
 .retailer:hover,.product:hover{border-color:#777eb0}
 .retailer{display:flex;align-items:center;gap:8px;padding:9px 10px;font-size:.83rem;font-weight:700}
