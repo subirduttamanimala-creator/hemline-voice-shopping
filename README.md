@@ -8,6 +8,12 @@ Online shoppers often have to translate a simple goal into several filters, then
 
 The prototype uses a rule-based English intent parser. It detects occasion, garment, colour, size, and a maximum price. It merges recognised preferences with the current conversation, filters out items that fail any active constraint, and sorts the matches by price. Prices and availability come directly from the sample inventory. The app gives a clear empty-state response when nothing matches.
 
+## Shop the look
+
+Try **“Black embroidered kurta and baggy jeans under ₹2,000.”** Hemline shows an outfit preview first and groups retailer photos and links by garment. It adds the lowest recorded prices to estimate the outfit total. It flags an alternative when it costs more than the budget left after allowing for the cheapest other pieces.
+
+The product cards are curated listings with price snapshots. Each garment also has a Google Shopping link and retailer searches on Amazon, Flipkart, Myntra and Meesho for current results. Confirm price, stock and size with the seller. The separate sample catalogue and demo bag illustrate a simulated checkout.
+
 ## Run locally
 
 From the repository root, run this command with Python 3.
@@ -24,10 +30,10 @@ See the [project walkthrough](PROJECT-WALKTHROUGH.md) for the implementation and
 
 ## Classroom demo
 
-1. Say or type **“Interview under ₹2,000, size M.”** The catalogue shows matching pieces with the budget and size visible.
-2. Say or type **“Make it black.”** The results narrow while the occasion, size and budget stay active.
-3. Try **“Under ₹500.”** The assistant explains that the catalogue has no exact match.
-4. Restore **“Under ₹2,000.”** Add a recommended item, open the bag, and choose **Simulate checkout**. The demo completes without collecting payment or personal details.
+1. Say or type **“Black embroidered kurta and baggy jeans under ₹2,000.”** Point out the outfit image and the two groups of shopping options.
+2. Say or type **“Under ₹1,500.”** Show the price comparison and how it changes when the same outfit exceeds the budget.
+3. Open **Google Shopping** for one garment to see current options. Click a product photo to visit its retailer.
+4. Open the separate sample catalogue and demo bag to demonstrate simulated checkout.
 
 To evaluate the idea in class, ask participants to find the same garment once with ordinary filters and once with Hemline. Record task completion, time to locate a valid item, and how often the assistant understood the first request.
 

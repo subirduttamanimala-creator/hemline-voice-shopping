@@ -1,4 +1,5 @@
 import {catalogue, filters, interpret, match, rupees} from './matcher.mjs';
+import {requestedPieces, shoppingLinks, suggestOutfit} from './outfits.mjs';
 
 const byId = id => document.getElementById(id);
 const promptField = byId('prompt');
@@ -9,6 +10,7 @@ const talk = byId('talk');
 const bagDialog = byId('bag');
 const bag = new Map();
 let preferences = {};
+let pieces = [];
 let recognition;
 
 function element(tag, content, className) {
@@ -21,7 +23,11 @@ function element(tag, content, className) {
 function message(text, speaker = 'stylist') {
   conversation.append(element('p', text, 'bubble '+speaker));
   conversation.scrollTop = conversation.scrollHeight;
-  if (speaker === 'stylist' && talk.checked && 'speechSynthesis' in window) {
+  if (speaker === 'stylist') speak(text);
+}
+
+function speak(text) {
+  if (talk.checked && 'speechSynthesis' in window) {
     window.speechSynthesis.cancel();
     const reply = new SpeechSynthesisUtterance(text.replace(/₹/g,' rupees '));
     reply.lang = 'en-IN';
@@ -81,45 +87,102 @@ function submit(text) {
   message(query,'user');
   promptField.value = '';
   const result = interpret(query, preferences);
-  if (!result.understood) {
+  const specified = requestedPieces(query);
+  const reset = /^(start over|reset|show (me )?all)[.!]?$/i.test(query);
+  if (!result.understood && !specified.length) {
     message('Try an occasion, a garment, a colour, a size, or a budget. For example, “a blue shirt under 1500, size M”.');
     return;
   }
-  preferences = result.preferences;
-  const results = match(preferences);
-  render(results);
-  if (!filters(preferences).length) {
-    message('Here’s the full catalogue. What would you like to find?');
-  } else if (!results.length) {
-    message(noMatchReply());
-  } else {
-    const best = results[0];
-    message('I found '+results.length+' '+(results.length === 1 ? 'piece' : 'pieces')+'. Start with the '+best.name+' at '+rupees(best.price)+'. It has '+best.detail+'.');
+  if (reset || /\b(any category|new outfit)\b/i.test(query)) pieces = [];
+  if (specified.length) {
+    pieces = specified;
+    if (specified.length === 1 && /\b(outfit|look)\b/i.test(query)) {
+      const [first] = specified;
+      if (first.category === 'kurta') pieces.push({category:'jeans'});
+      if (first.category === 'shirt' || first.category === 'blazer') pieces.push({category:'trousers'});
+      if (first.category === 'jeans' || first.category === 'trousers') pieces.push({category:'shirt'});
+    }
+  } else if (/\b(colou?r|make (it|them)|black|white|blue|green|red|grey|gray|beige|cream|navy|olive)\b/i.test(query) && pieces.length && (result.preferences.color || /\bany colou?r\b/i.test(query))) {
+    pieces = [{...pieces[0],color:result.preferences.color},...pieces.slice(1)];
   }
+  preferences = result.preferences;
+  render(match(preferences));
+  if (!pieces.length && !filters(preferences).length) return renderOutfit();
+  renderOutfit(suggestOutfit(preferences,pieces));
+  speak('Your outfit preview and shopping links are ready.');
 }
 
-function noMatchReply() {
-  const options = {
-    budget: 'any price',
-    color: 'any colour',
-    size: 'any size',
-    category: 'any category',
-    occasion: 'any occasion'
-  };
-  for (const [key, phrase] of Object.entries(options)) {
-    if (!(key in preferences)) continue;
-    const relaxed = {...preferences};
-    delete relaxed[key];
-    const alternatives = match(relaxed);
-    if (alternatives.length) {
-      const item = alternatives[0];
-      if (key === 'budget') {
-        return 'Nothing fits all those preferences at that budget. The lowest priced match for everything else is the '+item.name+' at '+rupees(item.price)+'.';
+function externalLink(label, url, className) {
+  const link = element('a',label,className);
+  link.href = url;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  return link;
+}
+
+function outfitImage(src, alt) {
+  const image = element('img');
+  image.src = src;
+  image.alt = alt;
+  return image;
+}
+
+function renderOutfit(outfit) {
+  const result = byId('outfit-result');
+  result.replaceChildren();
+  byId('outfit-placeholder').hidden = Boolean(outfit);
+  if (!outfit) return;
+  const {pieces:look,minimumTotal,budget} = outfit;
+  const preview = element('figure',null,'look-preview');
+  const fusion = look.length === 2 && look.some(piece => piece.category === 'kurta' && piece.color === 'black' && piece.style === 'embroidered')
+    && look.some(piece => piece.category === 'jeans' && piece.color === 'blue' && piece.style === 'baggy');
+  if (fusion) {
+    preview.append(outfitImage('./fusion-look.jpg','Black embroidered kurta and blue baggy jeans laid side by side'));
+  } else {
+    const tiles = element('div',null,'look-tiles');
+    for (const piece of look) {
+      const sample = catalogue.find(item => item.category === piece.category && item.color === piece.color);
+      const listing = piece.listings[0];
+      if (sample || listing) {
+        const image = outfitImage(sample ? './catalogue/'+sample.id+'.jpg' : listing.image,piece.label);
+        image.addEventListener('error', () => image.replaceWith(element('span',piece.label,'image-placeholder')));
+        tiles.append(image);
+      } else {
+        tiles.append(element('span',piece.label,'image-placeholder'));
       }
-      return 'Nothing matches all those preferences. Try “'+phrase+'” to see '+alternatives.length+' '+(alternatives.length === 1 ? 'option' : 'options')+'.';
     }
+    preview.append(tiles);
   }
-  return 'Nothing matches all those preferences. Change more than one preference, or reset to start a new search.';
+  preview.append(element('figcaption','Outfit inspiration'));
+  result.append(preview);
+
+  const note = minimumTotal === null
+    ? 'Check retailer prices to confirm the outfit total.'
+    : 'Lowest listed outfit total '+rupees(minimumTotal)+(budget === undefined ? '' : ' · Budget '+rupees(budget))+(budget !== undefined && minimumTotal > budget ? ' · Over budget' : '');
+  result.append(element('p',note,'outfit-total'));
+  result.append(element('p','Listed prices are estimates from retailer pages. Confirm current price, size and delivery with the seller.','shopping-note'));
+  for (const piece of look) {
+    const section = element('section',null,'shop-piece');
+    section.append(element('h3',piece.label));
+    const cards = element('div',null,'shop-grid');
+    for (const listing of piece.listings) {
+      const link = externalLink(null,listing.url,'retail-card');
+      const image = outfitImage(listing.image,listing.title);
+      image.loading = 'lazy';
+      image.referrerPolicy = 'no-referrer';
+      image.addEventListener('error', () => image.replaceWith(element('span','Photo on retailer site','image-placeholder')));
+      const details = element('div',null,'retail-info');
+      details.append(element('strong',listing.title),element('span',listing.store+' ↗'),
+        element('span',listing.price === null ? 'Check price' : rupees(listing.price)+(listing.fitsBudget === false ? ' · Over budget' : '')));
+      link.append(image,details);
+      cards.append(link);
+    }
+    if (piece.listings.length) section.append(cards);
+    const links = element('div',null,'retailer-links');
+    for (const [name,url] of shoppingLinks(piece,preferences.size)) links.append(externalLink(name+' ↗',url));
+    section.append(links);
+    result.append(section);
+  }
 }
 
 function renderBag() {
@@ -158,8 +221,10 @@ byId('reset').addEventListener('click', () => {
   promptField.value = '';
   speechStatus.textContent = '';
   preferences = {};
+  pieces = [];
   conversation.replaceChildren();
   render(catalogue);
+  renderOutfit();
   message('Hi, I’m your Hemline stylist. What are you dressing for?');
 });
 byId('bag-button').addEventListener('click', () => {
