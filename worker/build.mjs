@@ -5,6 +5,8 @@ const staticFiles = {
   '/style.css':'style.css',
   '/app.mjs':'app.mjs',
   '/search.mjs':'search.mjs',
+  '/voice.mjs':'voice.mjs',
+  '/transcriber.mjs':'transcriber.mjs',
   '/textiles.jpg':'textiles.jpg'
 };
 const entries = await Promise.all(Object.entries(staticFiles).map(async ([path,file]) => {

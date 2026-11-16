@@ -4,7 +4,7 @@ Hemline turns a spoken or typed clothing request into editable shopping details.
 
 ## Run locally
 
-Run `python -m http.server 8000 --directory dist` and open http://localhost:8000. The static preview supports request parsing and links to live retailer searches. The browser's Web Speech API handles microphone recognition. Allow microphone access and try the public site in Chrome or Edge if your embedded browser reports a speech-service error.
+Run `python -m http.server 8000 --directory dist` and open http://localhost:8000. The static preview supports request parsing and links to live retailer searches. Select Speak, allow microphone access, then choose Stop and transcribe. A quantized Whisper model runs in a browser worker. The first use downloads the model from Hugging Face. The recording stays on the device.
 
 ## Product search
 

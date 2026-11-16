@@ -9,7 +9,7 @@ Hemline demonstrates how a shopper can speak in everyday language and review the
 
 ## How it works
 
-HTML and CSS define the request, detail fields and shopping results. JavaScript uses the browser's speech recognition service to collect a transcript. Speech and typed requests use the same rule-based parser, including support for spoken numbers such as “five thousand.” The shopper can correct every field before submitting.
+HTML and CSS define the request, detail fields and shopping results. The browser records speech and runs a Whisper model locally to create a transcript. Press Stop and transcribe after speaking. Speech and typed requests use the same rule-based parser, including support for spoken numbers such as “five thousand.” The shopper can correct every field before submitting.
 
 Each retailer link carries a search built from those fields. The optional server-side Shopping API fetches product data and resolves links to seller pages. Different retailers may report prices and ratings differently, and the product page provides the current details.
 

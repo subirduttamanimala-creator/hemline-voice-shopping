@@ -48,6 +48,8 @@ export function readRequest(request) {
     text.match(/\b(?:for (?:my|a|an|the)|attending (?:a|an|the))\s+([a-z][a-z -]{1,50}?)(?=\s+(?:with|under|below|budget|in size|and i)\b|[,.!?]|$)/)?.[1]?.trim();
   const budget = readAmount((text.match(budgetBefore) ?? text.match(budgetAfter))?.[1]?.trim());
   const size = text.match(/\b(?:size|waist)\s*(?:is\s+)?(extra[- ]extra[- ]large|extra[- ]small|extra[- ]large|xxxl|xxl|xl|xs|small|medium|large|s|m|l|\d{1,3})\b/)?.[1];
+  const spokenSize = text.match(new RegExp('\\b(?:size|waist)\\s*(?:is\\s+)?'+amount,'i'))?.[1];
+  const numericSize = readAmount(spokenSize);
   const audience = text.match(/\b(women|women's|womens|men|men's|mens|girls|boys|unisex)\b/)?.[1]?.replace(/'s$|(?<=men)s$/,'');
   const adjective = qualitiesFound.length && (garmentMatches.length === 1 || !garmentMatches.length) ? qualitiesFound.join(' ') : '';
   const outfits = garmentMatches.length > 1
@@ -62,7 +64,8 @@ export function readRequest(request) {
   return {
     occasion, garment:outfits ? outfits.join(' + ') : garmentsFound.length ? [adjective,...garmentsFound].filter(Boolean).join(' ') : undefined,
     color:outfits ? '' : colorsFound.length ? colorsFound.join(' ') : undefined,
-    size:size?.replace(/-/g,' '), budget: Number.isFinite(budget) && budget > 0 ? Math.round(budget) : undefined, audience
+    size:size?.replace(/-/g,' ') ?? (numericSize > 0 && numericSize <= 100 ? String(numericSize) : undefined),
+    budget: Number.isFinite(budget) && budget > 0 ? Math.round(budget) : undefined, audience
   };
 }
 

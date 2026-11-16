@@ -1,4 +1,5 @@
 import {readRequest, searchTerms, retailerSearches} from './search.mjs';
+import {setupVoice} from './voice.mjs';
 
 const byId = id => document.getElementById(id);
 const request = byId('request');
@@ -11,7 +12,6 @@ const fields = Object.fromEntries([...form.elements].filter(item => item.name).m
 const currency = new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0});
 let parsedText = '';
 let activeSearch;
-let recording;
 
 function element(tag, text = '', className = '') {
   const node = document.createElement(tag);
@@ -138,12 +138,7 @@ form.addEventListener('submit', async event => {
 });
 
 byId('clear').addEventListener('click', () => {
-  const pending = recording;
-  recording = undefined;
-  pending?.abort();
-  mic.disabled = !Recognition;
-  mic.textContent = 'Speak';
-  mic.setAttribute('aria-pressed','false');
+  resetVoice();
   activeSearch?.abort();
   parsedText = '';
   request.value = '';
@@ -154,86 +149,7 @@ byId('clear').addEventListener('click', () => {
   request.focus();
 });
 
-const Recognition = window.SpeechRecognition ?? window.webkitSpeechRecognition;
-const errors = {
-  'not-allowed':'Allow microphone access in your browser and try again. You can also type your request.',
-  'service-not-allowed':'Speech recognition is unavailable in this browser. Open Hemline in Chrome or Edge, or type below.',
-  'audio-capture':'No microphone was detected. Connect a microphone and try again.',
-  'no-speech':'No speech was detected. Try again or type your request.',
-  network:'The browser speech service could not connect. Try in Chrome or Edge, or type your request.',
-  'language-not-supported':'The speech language is unavailable. You can type your request or use your device’s dictation.'
-};
-
-if (!Recognition) {
-  mic.disabled = true;
-  voiceStatus.textContent = 'Voice input is unavailable in this browser. Type here or use your device’s dictation.';
-}
-
-mic.addEventListener('click', () => {
-  if (recording) {
-    voiceStatus.textContent = 'Finishing transcription…';
-    mic.disabled = true;
-    recording.stop();
-    return;
-  }
-  const recognition = new Recognition();
-  recognition.lang = 'en-IN';
-  recognition.interimResults = true;
-  recognition.continuous = true;
-  const original = request.value;
-  let transcript = '';
-  let failed = false;
-  let silenceTimer;
-  let deadline;
-  recording = recognition;
-  mic.textContent = 'Stop listening';
-  mic.setAttribute('aria-pressed','true');
-  voiceStatus.textContent = 'Waiting for microphone…';
-
-  function finish() {
-    clearTimeout(silenceTimer);
-    clearTimeout(deadline);
-    if (recording !== recognition) return;
-    recording = undefined;
-    mic.disabled = false;
-    mic.textContent = 'Speak';
-    mic.setAttribute('aria-pressed','false');
-    if (transcript.trim()) {
-      request.value = transcript;
-      const filled = fillDetails(transcript);
-      if (!failed) voiceStatus.textContent = filled ? 'Review what Hemline heard and edit the details below.' :
-        'Review the transcript and enter any missing details below.';
-    } else if (!failed) {
-      request.value = original;
-      voiceStatus.textContent = 'No speech was detected. Try again or type your request.';
-    }
-  }
-
-  recognition.onstart = () => {
-    if (recording !== recognition) return;
-    voiceStatus.textContent = 'Listening. Describe your outfit, occasion, and budget.';
-    deadline = setTimeout(() => recognition.stop(),30000);
-  };
-  recognition.onresult = event => {
-    if (recording !== recognition) return;
-    transcript = Array.from(event.results,result => result[0].transcript.trim()).join(' ').slice(0,600);
-    request.value = transcript;
-    clearTimeout(silenceTimer);
-    if (event.results[event.results.length-1].isFinal) {
-      silenceTimer = setTimeout(() => recognition.stop(),3000);
-    }
-  };
-  recognition.onerror = event => {
-    if (recording !== recognition) return;
-    failed = true;
-    if (event.error !== 'aborted') voiceStatus.textContent = errors[event.error] ?? 'Speech recognition was interrupted. Try again or type your request.';
-  };
-  recognition.onend = finish;
-  try {
-    recognition.start();
-  } catch {
-    failed = true;
-    voiceStatus.textContent = 'The microphone could not start. Try again or type your request.';
-    finish();
-  }
+const resetVoice = setupVoice(mic,voiceStatus,text => {
+  request.value = text;
+  fillDetails(text);
 });
