@@ -59,6 +59,34 @@ function matchesGarment(term, title, category = '') {
   return true;
 }
 
+function snapshotProducts(query, size, range) {
+  const term = query.toLowerCase().replace(/\s+size\s+[\w -]+$/i,'').trim();
+  const category = term.match(/\b(sherwani|lehenga|saree|sari|kurti|kurta|suit|blazer|jeans|trousers|pants|shirt|dress(?:es)?)s?\b/)?.[1];
+  const normalizedCategory = {kurti:'kurta',sari:'saree',pants:'trousers',dresses:'dress'}[category] ?? category;
+  const occasion = term.match(/\b(wedding|reception|engagement|sangeet|haldi|mehendi|party|interview|office|work|college|formal|casual)\b/)?.[1];
+  const wedding = /wedding|reception|engagement|sangeet|haldi|mehendi/.test(occasion ?? '');
+  const audience = term.match(/\b(men|women|boys|girls|unisex)\b/)?.[1];
+  const color = term.match(/\b(navy(?: blue)?|black|white|off-white|cream|ivory|blue|charcoal|grey|gray|beige|brown|olive|green|maroon|burgundy|red|pink|purple|yellow|orange|teal|silver|gold)\b/)?.[1];
+  const matches = snapshot.products.flatMap(item => {
+    const title = item.title.toLowerCase();
+    if (normalizedCategory && item.category !== normalizedCategory) return [];
+    if (!normalizedCategory && (!wedding || !item.occasions.includes('wedding'))) return [];
+    if (wedding && !item.occasions.includes('wedding')) return [];
+    if (audience && audience !== 'unisex' && !new RegExp('\\b'+audience+'\\b','i').test(title+' '+(item.audience ?? ''))) return [];
+    if (color && !new RegExp('\\b'+(color === 'navy blue' ? 'navy' : color === 'grey' || color === 'gray' ? 'gr[ae]y' : color)+'\\b','i').test(title+' '+(item.colour ?? ''))) return [];
+    if (/\bbaggy\b/.test(term) && !/\b(?:baggy|loose fit|wide leg)\b/.test(title)) return [];
+    if (/\bembroidered\b/.test(term) && !/\bembroider/.test(title)) return [];
+    if (!matchesGarment(term,title)) return [];
+    const garmentName = normalizedCategory === 'saree' ? 'saree|sari' : normalizedCategory === 'trousers' ? 'trousers|pants|chinos' :
+      normalizedCategory === 'dress' ? 'dress(?:es)?' : normalizedCategory;
+    if (garmentName && !new RegExp('\\b(?:'+garmentName+')s?\\b','i').test(title)) return [];
+    const status = sizeStatus(size,item.sizes ?? [],item.retailer === 'Flipkart' || !/^\d+$/.test(size));
+    if (status === 'different') return [];
+    return [{...item,sizeStatus:status,snapshotDate:snapshot.asOf}];
+  });
+  return rankProducts(matches,range);
+}
+
 function myntraListings(html, size, term) {
   const results = embeddedState(html,'__myx')?.searchData?.results;
   if (!Array.isArray(results?.products)) return undefined;
@@ -76,7 +104,8 @@ function myntraListings(html, size, term) {
     if (status === 'different') return [];
     return [{
       ...target,title:item.productName,price:positiveNumber(item.price),rating:positiveNumber(item.rating),
-      reviews:positiveNumber(item.ratingCount),image:shopImage(item.searchImage),sizeStatus:status
+      reviews:positiveNumber(item.ratingCount),image:shopImage(item.searchImage),sizeStatus:status,
+      sizes:[...new Set([...labels,...listed].filter(Boolean))],colour:item.primaryColour,audience:item.gender
     }];
   });
 }
@@ -99,7 +128,7 @@ function flipkartCandidates(html, size, range) {
         const url = new URL(product.baseUrl,'https://www.flipkart.com/');
         const pid = url.searchParams.get('pid');
         if (pid && /^[A-Z0-9]+$/i.test(pid)) target.url += '?pid='+encodeURIComponent(pid);
-        items.set(target.url,{...target,price,sizeStatus:status});
+        items.set(target.url,{...target,price,sizeStatus:status,sizes:label ? [label] : []});
       }
     }
     for (const child of Object.values(node)) visit(child);
@@ -117,7 +146,8 @@ function flipkartCard(html, candidate, size, term) {
   return {
     ...candidate,title:item.name,price:positiveNumber(offer.price),rating:positiveNumber(item.aggregateRating.ratingValue),
     reviews:positiveNumber(item.aggregateRating.ratingCount ?? item.aggregateRating.reviewCount),image:shopImage([item.image].flat()[0]),
-    sizeStatus:status === 'check' && candidate.sizeStatus === 'matched' ? 'matched' : status
+    sizeStatus:status === 'check' && candidate.sizeStatus === 'matched' ? 'matched' : status,
+    sizes:item.size ? [...candidate.sizes,item.size] : candidate.sizes,colour:item.color
   };
 }
 

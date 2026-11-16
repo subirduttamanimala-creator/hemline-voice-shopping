@@ -86,6 +86,7 @@ function renderProduct(product, index) {
     body.append(element('span','See reviews on retailer site','merchant'));
   }
   if (product.sizeStatus) body.append(element('span',product.sizeStatus === 'matched' ? 'Requested size listed' : 'Check size on retailer site','merchant'));
+  if (product.snapshotDate) body.append(element('span','Recorded '+new Date(product.snapshotDate+'T00:00:00Z').toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}),'merchant'));
   link.append(body);
   item.append(link);
   return item;
@@ -152,7 +153,8 @@ form.addEventListener('submit', async event => {
   const rangeText = range ? currency.format(range.min)+'–'+currency.format(range.max)+(terms.length > 1 ? ' per piece. ' : '. ') : '';
   if (products.length) {
     const stores = [...new Set(products.map(item => item.retailer))].join(', ');
-    resultStatus.textContent = rangeText+products.length+' ranked '+(products.length === 1 ? 'pick' : 'picks')+' from '+stores+' (up to '+resultLimit+'). Confirm current size availability with the retailer.';
+    const recorded = products.some(item => item.snapshotDate) ? ' Some listings use recorded prices and ratings.' : '';
+    resultStatus.textContent = rangeText+products.length+' ranked '+(products.length === 1 ? 'pick' : 'picks')+' from '+stores+' (up to '+resultLimit+').'+recorded+' Check the current price and size with the retailer.';
   } else if (listings.some(entry => entry.status === 'ok')) {
     resultStatus.textContent = rangeText+'No reviewed products matched this search. Try a different target budget or open a retailer below.';
   } else {

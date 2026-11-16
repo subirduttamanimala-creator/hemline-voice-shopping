@@ -25,6 +25,8 @@ The hosted worker reads publicly listed product information from Myntra and Flip
 
 Configure `SERPAPI_API_KEY` as a server-side Sites secret to include additional Google Shopping sources. Retailer search links remain available for stores that cannot supply reviewed product cards.
 
+When live retailer requests return no ranked products, Hemline uses a dated snapshot of reviewed Myntra and Flipkart listings for supported garments and searches it against the shopper's choices. Snapshot cards show the collection date and link to the retailer for current price and stock. The source snapshot is stored as compressed JSON in `worker/reviewed-listings.json.gz`.
+
 Run `node worker/build.mjs` to build the Sites Worker. The build packages browser assets and the worker into `dist/server/index.js`.
 
 [Classroom walkthrough](PROJECT-WALKTHROUGH.md)

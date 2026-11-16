@@ -95,9 +95,11 @@ async function products(url, env) {
       directProducts(query,size,range),
       env.SERPAPI_API_KEY ? liveProducts(query,range,env.SERPAPI_API_KEY).catch(() => null) : null
     ]);
-    if (!direct.available && !provider) return Response.json({products:[],status:'unavailable'},{status:502});
     const results = rankProducts([...direct.cards,...(provider ?? [])],range);
-    return Response.json({products:results,status:'ok'},{headers:{'cache-control':'public, max-age=300'}});
+    if (results.length) return Response.json({products:results,status:'ok'},{headers:{'cache-control':'public, max-age=300'}});
+    const recorded = snapshotProducts(query,size,range);
+    const status = recorded.length ? 'snapshot' : direct.available || provider ? 'ok' : 'unavailable';
+    return Response.json({products:recorded,status},{headers:{'cache-control':'public, max-age:300'}});
   } catch {
     return Response.json({products:[]},{status:502});
   }

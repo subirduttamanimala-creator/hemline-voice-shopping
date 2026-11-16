@@ -1,4 +1,5 @@
 import {mkdir,readFile,writeFile} from 'node:fs/promises';
+import {gunzipSync} from 'node:zlib';
 
 const staticFiles = {
   '/':'index.html',
@@ -18,7 +19,8 @@ const entries = await Promise.all(Object.entries(staticFiles).map(async ([path,f
 }));
 const source = await readFile(new URL('./index.mjs',import.meta.url),'utf8');
 const retailers = await readFile(new URL('./retailers.mjs',import.meta.url),'utf8');
+const snapshot = JSON.parse(gunzipSync(await readFile(new URL('./reviewed-listings.json.gz',import.meta.url))));
 const ranking = (await readFile(new URL('../dist/ranking.mjs',import.meta.url),'utf8')).replace(/^export /gm,'');
 const output = new URL('../dist/server/',import.meta.url);
 await mkdir(output,{recursive:true});
-await writeFile(new URL('index.js',output),'const assets = '+JSON.stringify(Object.fromEntries(entries))+';\n'+ranking+'\n'+retailers+'\n'+source);
+await writeFile(new URL('index.js',output),'const assets = '+JSON.stringify(Object.fromEntries(entries))+';\nconst snapshot = '+JSON.stringify(snapshot)+';\n'+ranking+'\n'+retailers+'\n'+source);
