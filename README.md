@@ -10,7 +10,7 @@ Run `python -m http.server 8000 --directory dist` and open http://localhost:8000
 
 Hemline builds searches from the filled fields and creates separate groups when garments are joined with a plus sign. Each group links to Google Shopping, Amazon India, Flipkart, Myntra, Meesho and AJIO.
 
-**Top reviewed picks** shows up to 25 products rated 4 stars or higher. It weighs stars alongside review count, collapses repeated titles from the same store, and gives eligible listings from underrepresented stores room in the ranking. The price range and garment filters still apply. The search includes the requested size. Check size availability on the retailer page.
+**Top reviewed picks** shows up to 25 products rated 4 stars or higher. It weighs stars alongside review count, collapses repeated titles from the same store, and gives additional eligible stores a spot among the first five results when available. The results summary shows how many picks come from each store. The price range and garment filters still apply. The search includes the requested size. Check size availability on the retailer page.
 
 | Target budget | Price buffer |
 | --- | --- |

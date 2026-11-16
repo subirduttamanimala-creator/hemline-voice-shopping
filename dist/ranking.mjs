@@ -39,7 +39,9 @@ export function rankProducts(products, range, limit = resultLimit, mixRetailers 
   }
   const picked = [];
   while (picked.length < limit && queues.size) {
-    const best = [...queues.values()].reduce((first,current) =>
+    const available = [...queues.values()];
+    const newStores = picked.length >= 2 && picked.length < 5 ? available.filter(store => !store.used) : [];
+    const best = (newStores.length ? newStores : available).reduce((first,current) =>
       reviewScore(current.items[0])-.12*current.used > reviewScore(first.items[0])-.12*first.used ? current : first);
     const item = best.items.shift();
     picked.push(item);

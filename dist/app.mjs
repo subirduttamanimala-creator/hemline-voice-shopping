@@ -1,5 +1,5 @@
 import {readRequest, searchTerms, retailerSearches} from './search.mjs';
-import {priceWindow,rankProducts,resultLimit} from './ranking.mjs';
+import {priceWindow,rankProducts,resultLimit} from './ranking.mjs?v=store-mix';
 import {setupVoice} from './voice.mjs';
 
 const byId = id => document.getElementById(id);
@@ -77,7 +77,7 @@ function renderProduct(product, index) {
   }
   const body = element('div','','product-body');
   body.append(element('span',product.retailer+' ↗','merchant'),element('strong',product.title));
-  const price = Number.isFinite(product.price) ? currency.format(product.price) : 'Check price';
+  const price = Number.isFinite(product.price) ? (product.priceType === 'mrp' ? 'MRP ' : '')+currency.format(product.price) : 'Check price';
   body.append(element('span',price));
   if (Number.isFinite(product.rating)) {
     const count = Number.isFinite(product.reviews) ? ' · '+product.reviews.toLocaleString('en-IN')+' ratings' : '';
@@ -111,7 +111,7 @@ function makeSection(query, range) {
 async function getListings(query, budget, pieces, size, signal) {
   try {
     const url = new URL('./api/products',location.href);
-    url.search = new URLSearchParams({q:query,budget:budget || '',pieces,size});
+    url.search = new URLSearchParams({q:query,budget:budget || '',pieces,size,view:'mixed'});
     const response = await fetch(url,{signal});
     if (!response.ok) return {products:[],status:'unavailable'};
     const body = await response.json();
@@ -152,9 +152,11 @@ form.addEventListener('submit', async event => {
   rankedList.append(...products.map(renderProduct));
   const rangeText = range ? currency.format(range.min)+'–'+currency.format(range.max)+(terms.length > 1 ? ' per piece. ' : '. ') : '';
   if (products.length) {
-    const stores = [...new Set(products.map(item => item.retailer))].join(', ');
+    const stores = new Map();
+    for (const item of products) stores.set(item.retailer,(stores.get(item.retailer) ?? 0)+1);
+    const storeMix = [...stores].map(([name,count]) => name+' '+count).join(' · ');
     const recorded = products.some(item => item.snapshotDate) ? ' Some listings use recorded prices and ratings.' : '';
-    resultStatus.textContent = rangeText+products.length+' ranked '+(products.length === 1 ? 'pick' : 'picks')+' from '+stores+'. All have at least 4 stars. Rankings weigh review count and include multiple stores when matches are available.'+recorded+' Check the current price and size with the retailer.';
+    resultStatus.textContent = rangeText+products.length+' '+(products.length === 1 ? 'pick' : 'picks')+' rated 4 stars or higher. '+storeMix+'.'+recorded+' Check current price and size with the retailer.';
   } else if (listings.some(entry => entry.status === 'ok')) {
     resultStatus.textContent = rangeText+'No reviewed products matched this search. Try a different target budget or open a retailer below.';
   } else {

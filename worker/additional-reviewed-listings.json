@@ -16,36 +16,6 @@
   },
   {
     "retailer": "AJIO",
-    "title": "KISAH Men Regular Fit Kurta & Pyjamas Set",
-    "url": "https://www.ajio.com/kisah-men-regular-fit-kurta--pyjamas-set/p/466680998_navy",
-    "price": 3239,
-    "rating": 4.3,
-    "reviews": 11,
-    "colour": "Navy",
-    "sizes": [],
-    "audience": "Men",
-    "category": "kurta",
-    "occasions": [
-      "wedding"
-    ]
-  },
-  {
-    "retailer": "AJIO",
-    "title": "KISAH Men Regular Fit Kurta Pyjama with Dupatta",
-    "url": "https://www.ajio.com/kisah-men-regular-fit-kurta-pyjama-with-dupatta/p/700656939_red",
-    "price": 3999,
-    "rating": 4.5,
-    "reviews": 2,
-    "colour": "Red",
-    "sizes": [],
-    "audience": "Men",
-    "category": "kurta",
-    "occasions": [
-      "wedding"
-    ]
-  },
-  {
-    "retailer": "AJIO",
     "title": "JOMPERS Men Embroidered Regular Fit Kurta & Pyjamas Set",
     "url": "https://rush.ajio.com/jompers-men-embroidered-regular-fit-kurta--pyjamas-set/p/703349532_brown",
     "price": 1870,
@@ -75,13 +45,432 @@
     ]
   },
   {
-    "retailer": "Nykaa Fashion",
-    "title": "See Designs Men Grey Cotton Straight Slub Effect Kurta & Pyjama (Set of 2)",
-    "url": "https://www.nykaafashion.com/see-designs-men-grey-cotton-straight-slub-effect-kurta-pyjama-set-of-2/p/12053209",
-    "price": 2999,
+    "colour": "Black",
+    "category": "kurta",
+    "url": "https://www.ajio.com/kisah-men-embroidered-churidar-kurta-set/p/466685890004",
+    "title": "KISAH Men Embroidered Churidar Kurta Set",
+    "audience": "Men",
+    "price": 4700,
+    "rating": 4.5,
+    "reviews": 2,
+    "sizes": [],
+    "retailer": "AJIO",
+    "occasions": [
+      "wedding"
+    ],
+    "priceType": "mrp"
+  },
+  {
+    "colour": "Pink",
+    "category": "kurta",
+    "url": "https://www.ajio.com/kisah-men-printed-kurta-jacket-churidar-set/p/464039619_pink",
+    "title": "KISAH Men Printed Kurta Jacket Churidar Set",
+    "audience": "Men",
+    "price": 6999,
+    "rating": 4.6,
+    "reviews": 45,
+    "sizes": [],
+    "retailer": "AJIO",
+    "occasions": [
+      "wedding"
+    ],
+    "priceType": "mrp"
+  },
+  {
+    "retailer": "AJIO",
+    "title": "KISAH Men Regular Fit Kurta & Pyjamas Set",
+    "url": "https://www.ajio.com/kisah-men-regular-fit-kurta--pyjamas-set/p/466680998_navy",
+    "price": 3239,
+    "rating": 4.3,
+    "reviews": 11,
+    "colour": "Navy",
+    "sizes": [],
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "retailer": "AJIO",
+    "title": "KISAH Men Regular Fit Kurta Pyjama with Dupatta",
+    "url": "https://www.ajio.com/kisah-men-regular-fit-kurta-pyjama-with-dupatta/p/700656939_red",
+    "price": 3999,
+    "rating": 4.5,
+    "reviews": 2,
+    "colour": "Red",
+    "sizes": [],
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/asthetic-geometric-print-sherwani/p/itmdb9572147d7a3?pid=SRWHRHVATUYF3REG",
+    "retailer": "Flipkart",
+    "price": 4109,
+    "sizes": [],
+    "title": "ASTHETIC Geometric Print Sherwani",
+    "rating": 4.3,
+    "reviews": 3,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/sherwani/b/q/u/s-iw578-blue-asthetic-original-imahrhvaw64hdgh2.jpeg?q=70",
+    "colour": "Blue",
+    "category": "sherwani",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/diwas-manyavar-men-kurta-pyjama-ethnic-jacket-set/p/itmad31291bb697b?pid=ETHHDNT9R7PEZX2E",
+    "retailer": "Flipkart",
+    "price": 3998,
+    "sizes": [
+      "M"
+    ],
+    "title": "DIWAS by Manyavar Men Kurta Pyjama Ethnic Jacket Set",
+    "rating": 4.3,
+    "reviews": 7,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/ethnic-set/o/k/v/xl-jast168-306-diwas-by-manyavar-original-imahg9yf2ye5qazz.jpeg?q=70",
+    "colour": "Dark Blue",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/jompers-men-kurta-pyjama-ethnic-jacket-set/p/itm18c9153fe606b?pid=ETHHYHEZHYECN6TX",
+    "retailer": "Flipkart",
+    "price": 3999,
+    "sizes": [
+      "XXL"
+    ],
+    "title": "Jompers Men Kurta Pyjama Ethnic Jacket Set",
+    "rating": 4.2,
+    "reviews": 6,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/ethnic-set/4/o/k/-resized-original-imahptychcrwzkmg.jpeg?q=70",
+    "colour": "Peacock",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/jompers-men-kurta-pyjama-ethnic-jacket-set/p/itm18c9153fe606b?pid=ETHHYHEZKCZHFZRR",
+    "retailer": "Flipkart",
+    "price": 3999,
+    "sizes": [
+      "M"
+    ],
+    "title": "Jompers Men Kurta Pyjama Ethnic Jacket Set",
+    "rating": 4.2,
+    "reviews": 6,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/ethnic-set/4/o/k/-resized-original-imahptychcrwzkmg.jpeg?q=70",
+    "colour": "Peacock",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/jompers-men-kurta-pyjama-ethnic-jacket-set/p/itm4c18c9be6ef90?pid=ETHH7C4WZFGY9VWH",
+    "retailer": "Flipkart",
+    "price": 3939,
+    "sizes": [
+      "L"
+    ],
+    "title": "Jompers Men Kurta Pyjama Ethnic Jacket Set",
+    "rating": 4,
+    "reviews": 12,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/ethnic-set/j/q/o/-original-imahpyef9c6y47h3.jpeg?q=70",
+    "colour": "Black",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/jompers-men-kurta-pyjama-ethnic-jacket-set/p/itm4c18c9be6ef90?pid=ETHH7C4WZZGFWBFM",
+    "retailer": "Flipkart",
+    "price": 3939,
+    "sizes": [
+      "XL"
+    ],
+    "title": "Jompers Men Kurta Pyjama Ethnic Jacket Set",
+    "rating": 4,
+    "reviews": 12,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/ethnic-set/j/q/o/-original-imahpyef9c6y47h3.jpeg?q=70",
+    "colour": "Black",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/jompers-men-kurta-pyjama-ethnic-jacket-set/p/itm8ca4d4802daed?pid=ETHH7C4WAS2N3HRF",
+    "retailer": "Flipkart",
+    "price": 3939,
+    "sizes": [
+      "XL"
+    ],
+    "title": "Jompers Men Kurta Pyjama Ethnic Jacket Set",
+    "rating": 4,
+    "reviews": 12,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/ethnic-set/h/j/p/m-jokpwcs-5139purple-jompers-original-imah7c4wzfzmhazk.jpeg?q=70",
+    "colour": "Purple",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/jompers-men-kurta-pyjama-ethnic-jacket-set/p/itm8ca4d4802daed?pid=ETHH7C4WKJVHGNQH",
+    "retailer": "Flipkart",
+    "price": 3939,
+    "sizes": [
+      "L"
+    ],
+    "title": "Jompers Men Kurta Pyjama Ethnic Jacket Set",
+    "rating": 4,
+    "reviews": 12,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/ethnic-set/s/d/w/-original-imahq2usxumkzz8e.jpeg?q=70",
+    "colour": "Purple",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/jompers-men-kurta-pyjama-ethnic-jacket-set/p/itmd32e266958c11?pid=ETHHBAAY5Y9FHQVH",
+    "retailer": "Flipkart",
+    "price": 4089,
+    "sizes": [
+      "XXL"
+    ],
+    "title": "Jompers Men Kurta Pyjama Ethnic Jacket Set",
+    "rating": 5,
+    "reviews": 4,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/ethnic-set/j/q/a/m-jokpwcs-w-5241peacock-jompers-original-imahba9zmhmxwfqh.jpeg?q=70",
+    "colour": "Peacock Blue",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/manyavar-men-kurta-churidar-ethnic-jacket-set/p/itm288781f2c71f9?pid=ETHF6SVHVWRHCGDW",
+    "retailer": "Flipkart",
+    "price": 6998,
+    "sizes": [
+      "M"
+    ],
+    "title": "MANYAVAR Men Kurta Churidar Ethnic Jacket Set",
     "rating": 4.1,
-    "reviews": 27,
-    "colour": "Grey",
+    "reviews": 14,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/k7p37gw0/ethnic-set/n/f/c/xl-jast076-307-manyavar-original-imafpvmsrt5zfr2n.jpeg?q=70",
+    "colour": "MAROON",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/manyavar-men-kurta-churidar-ethnic-jacket-set/p/itm794e8df5236c6?pid=ETHFVB9ZPPGYTSX2",
+    "retailer": "Flipkart",
+    "price": 6998,
+    "sizes": [
+      "XL"
+    ],
+    "title": "MANYAVAR Men Kurta Churidar Ethnic Jacket Set",
+    "rating": 5,
+    "reviews": 5,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/keq058w0/ethnic-set/r/t/n/xxl-jast123-303-xxl-manyavar-original-imafvbkgvshufpzk.jpeg?q=70",
+    "colour": "BEIGE",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/manyavar-men-kurta-churidar-ethnic-jacket-set/p/itmc3241cea20818?pid=ETHGETF4QYB4HAWV",
+    "retailer": "Flipkart",
+    "price": 3998,
+    "sizes": [
+      "S"
+    ],
+    "title": "MANYAVAR Men Kurta Churidar Ethnic Jacket Set",
+    "rating": 4,
+    "reviews": 7,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/ethnic-set/o/c/4/xxl-jast176-306-manyavar-resized-original-imaget7mskgvhdyb.jpeg?q=70",
+    "colour": "Black",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/manyavar-men-kurta-churidar-set/p/itm53a1872b20ee8?pid=ETHGJVMGYYQHJVTV",
+    "retailer": "Flipkart",
+    "price": 3998,
+    "sizes": [
+      "S"
+    ],
+    "title": "MANYAVAR Men Kurta Churidar Set",
+    "rating": 4,
+    "reviews": 35,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/ethnic-set/h/i/1/-original-imahpyesghf7ftjk.jpeg?q=70",
+    "colour": "Green",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/manyavar-men-kurta-churidar-set/p/itm74eaf8a7be373?pid=ETHGKH2NRW3RHHU9",
+    "retailer": "Flipkart",
+    "price": 3998,
+    "sizes": [
+      "L"
+    ],
+    "title": "MANYAVAR Men Kurta Churidar Set",
+    "rating": 5,
+    "reviews": 1,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/ethnic-set/r/s/r/l-sosk563-319-manyavar-original-imagkh2nz9j6vbbg.jpeg?q=70",
+    "colour": "Peach",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/manyavar-men-kurta-churidar-set/p/itm8bc491387ad6c?pid=ETHFZBMDQM6JUJDG",
+    "retailer": "Flipkart",
+    "price": 4998,
+    "sizes": [
+      "XL"
+    ],
+    "title": "MANYAVAR Men Kurta Churidar Set",
+    "rating": 4,
+    "reviews": 7,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/kjuby4w0/ethnic-set/0/c/o/m-jast117-manyavar-original-imafzbhxtr6epzez.jpeg?q=70",
+    "colour": "BROWN",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/manyavar-men-kurta-pyjama-set/p/itm6eafcc7a3c4fc?pid=ETHHF4SBFKSYSR2G",
+    "retailer": "Flipkart",
+    "price": 5498,
+    "sizes": [
+      "L"
+    ],
+    "title": "MANYAVAR Men Kurta Pyjama Set",
+    "rating": 5,
+    "reviews": 1,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/ethnic-set/z/0/k/m-sdes1054-303-315-manyavar-original-imahf4sbbchv5hxw.jpeg?q=70",
+    "colour": "Beige",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/manyavar-men-kurta-pyjama-set/p/itm7ad37e2a16370?pid=ETHGJVMGC536D4WY",
+    "retailer": "Flipkart",
+    "price": 3998,
+    "sizes": [
+      "L"
+    ],
+    "title": "MANYAVAR Men Kurta Pyjama Set",
+    "rating": 4.1,
+    "reviews": 37,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/ethnic-set/c/w/g/-original-imahqfr3efnpzsza.jpeg?q=70",
+    "colour": "Maroon",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/manyavar-men-kurta-pyjama-set/p/itm8087865efd7a0?pid=ETHGWGVWWRKFHN79",
+    "retailer": "Flipkart",
+    "price": 5498,
+    "sizes": [
+      "XL"
+    ],
+    "title": "MANYAVAR Men Kurta Pyjama Set",
+    "rating": 5,
+    "reviews": 6,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/ethnic-set/2/a/j/-original-imahhm2hasg7mpv6.jpeg?q=70",
+    "colour": "Yellow",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/manyavar-men-kurta-pyjama-set/p/itm91da97473ae9d?pid=ETHGHR9CZRDCRHNS",
+    "retailer": "Flipkart",
+    "price": 3998,
+    "sizes": [
+      "M"
+    ],
+    "title": "MANYAVAR Men Kurta Pyjama Set",
+    "rating": 4.3,
+    "reviews": 38,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/ethnic-set/x/k/c/-original-imahq638rtag7y2q.jpeg?q=70",
+    "colour": "Teal Blue",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.flipkart.com/manyavar-men-kurta-pyjama-set/p/itmd368f520f6071?pid=ETHGP7STPEFF4EDY",
+    "retailer": "Flipkart",
+    "price": 3998,
+    "sizes": [
+      "L"
+    ],
+    "title": "MANYAVAR Men Kurta Pyjama Set",
+    "rating": 4.3,
+    "reviews": 10,
+    "image": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/ethnic-set/0/u/g/xxl-sdes814-306-manyavar-original-imagp7stwnff5f4f.jpeg?q=70",
+    "colour": "Blue",
+    "category": "kurta",
+    "audience": "Men",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "retailer": "Meesho",
+    "title": "Men’s Cotton Shiffli Work Kurta Set",
+    "url": "https://www.meesho.com/mens-cotton-shiffli-work-kurta-setmens-premium-shiffli-work-kurta-pajamamens-ethnic-cotton-shiffli-kurta-white-pajama-setmens-wedding-wear-cotton-shiffli-kurta-white-pajama-set/p/bh3f8n",
+    "price": 586,
+    "rating": 4.5,
+    "reviews": 1098,
     "sizes": [],
     "audience": "Men",
     "category": "kurta",
@@ -104,12 +493,59 @@
     ]
   },
   {
-    "retailer": "Meesho",
-    "title": "Men’s Cotton Shiffli Work Kurta Set",
-    "url": "https://www.meesho.com/mens-cotton-shiffli-work-kurta-setmens-premium-shiffli-work-kurta-pajamamens-ethnic-cotton-shiffli-kurta-white-pajama-setmens-wedding-wear-cotton-shiffli-kurta-white-pajama-set/p/bh3f8n",
-    "price": 586,
-    "rating": 4.5,
-    "reviews": 1098,
+    "retailer": "Nykaa Fashion",
+    "title": "KISAH Men Off White Kurta and Pant (Set of 2)",
+    "url": "https://www.nykaafashion.com/kisah-men-off-white-kurta-and-pant-set-of-2/p/15260411",
+    "price": 3999,
+    "rating": 4,
+    "reviews": 7,
+    "colour": "Off White",
+    "sizes": [],
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "retailer": "Nykaa Fashion",
+    "title": "See Designs Men Grey Cotton Straight Slub Effect Kurta & Pyjama (Set of 2)",
+    "url": "https://www.nykaafashion.com/see-designs-men-grey-cotton-straight-slub-effect-kurta-pyjama-set-of-2/p/12053209",
+    "price": 2999,
+    "rating": 4.1,
+    "reviews": 27,
+    "colour": "Grey",
+    "sizes": [],
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "colour": "Wine and Cream",
+    "category": "kurta",
+    "url": "https://www.tatacliq.com/manyavar-wine-cream-regular-fit-self-design-kurta-pyjamas-set/p-mp000000015545771",
+    "title": "Manyavar Men Wine & Cream Self Design Kurta & Pyjamas Set",
+    "audience": "Men",
+    "price": 5999,
+    "rating": 4,
+    "reviews": 2,
+    "sizes": [],
+    "retailer": "Tata CLiQ",
+    "occasions": [
+      "wedding"
+    ],
+    "priceType": "mrp"
+  },
+  {
+    "retailer": "Tata CLiQ",
+    "title": "VASTRAMAY Men Light Brown Cotton Regular Fit Kurta Pyjama Set",
+    "url": "https://www.tatacliq.com/vastramay-light-brown-cotton-regular-fit-kurta-pyjama-set/p-mp000000010753673",
+    "price": 669,
+    "rating": 4,
+    "reviews": 1,
+    "colour": "Light Brown",
     "sizes": [],
     "audience": "Men",
     "category": "kurta",
@@ -152,14 +588,21 @@
     ]
   },
   {
-    "retailer": "Tata CLiQ",
-    "title": "VASTRAMAY Men Light Brown Cotton Regular Fit Kurta Pyjama Set",
-    "url": "https://www.tatacliq.com/vastramay-light-brown-cotton-regular-fit-kurta-pyjama-set/p-mp000000010753673",
-    "price": 669,
-    "rating": 4,
-    "reviews": 1,
-    "colour": "Light Brown",
-    "sizes": [],
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-floral-embroidered-chikankari-mandarin-collar-straight-kurta-with-pyjama/33309881/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Floral Embroidered Chikankari Mandarin Collar Straight Kurta With Pyjama",
+    "price": 4999,
+    "rating": 5,
+    "reviews": 7,
+    "image": "https://assets.myntassets.com/assets/images/2025/MARCH/22/h06UwzcN_970a0d6e4141455b90dfede883dd475d.jpg",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Yellow",
     "audience": "Men",
     "category": "kurta",
     "occasions": [
@@ -167,14 +610,2259 @@
     ]
   },
   {
-    "retailer": "Nykaa Fashion",
-    "title": "KISAH Men Off White Kurta and Pant (Set of 2)",
-    "url": "https://www.nykaafashion.com/kisah-men-off-white-kurta-and-pant-set-of-2/p/15260411",
-    "price": 3999,
-    "rating": 4.0,
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-self-design-sequined-regular-kurta-with-pyjamas/26396428/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Self Design Sequined Regular Kurta with Pyjamas",
+    "price": 6499,
+    "rating": 5,
+    "reviews": 8,
+    "image": "https://assets.myntassets.com/assets/images/26396428/2023/12/13/3f2575d8-eba3-4f78-a22d-bef0cfafd1661702449523197ManyavarMensCreamBlendedViscoseSelfDesignKurtaPyjamaSet1.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Cream",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-green-angrakha-kurta-with-pyjamas/19324722/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Green Angrakha Kurta with Pyjamas",
+    "price": 4999,
+    "rating": 5,
+    "reviews": 11,
+    "image": "https://assets.myntassets.com/assets/images/19324722/2022/7/30/bdeec9f5-b0c3-42de-a48e-7af6e82b94db1659182820633KurtaSets1.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Green",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-ethnic-motifs-printed-regular-kurta-with-churidar/26396450/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Ethnic Motifs Printed Regular Kurta with Churidar",
+    "price": 4999,
+    "rating": 4.900000095367432,
+    "reviews": 10,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/18/YFjWFYyO_59b2ed96381e4ede9570f65e8ae22fd6.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Green",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-ethnic-motifs-printed-regular-kurta-with-churidar/26396442/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Ethnic Motifs Printed Regular Kurta with Churidar",
+    "price": 5499,
+    "rating": 4.900000095367432,
+    "reviews": 10,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/18/AJOX2yGF_f4d440df366c41968718e198a58b7191.jpg",
+    "sizes": [
+      "XXL",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Blue",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-geometric-printed-mandarin-collar-kurta--churidar/24659386/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Geometric Printed Mandarin Collar Kurta & Churidar",
+    "price": 5499,
+    "rating": 4.900000095367432,
+    "reviews": 10,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/18/u4HOPahT_e2616fd9eac84ff29cab75b1e99f0bbe.jpg",
+    "sizes": [
+      "L",
+      "S",
+      "M",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Pink",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-white-floral-kurta--churidar-with-nehru-jacket/19887002/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men White Floral Kurta & Churidar with Nehru Jacket",
+    "price": 7999,
+    "rating": 4.875,
+    "reviews": 8,
+    "image": "https://assets.myntassets.com/assets/images/19887002/2022/9/21/6e1f75de-a78d-430d-b689-2d9e1fdacf091663742334799-Manyavar-Men-Kurta-Sets-5091663742334078-1.jpg",
+    "sizes": [
+      "L",
+      "S",
+      "M",
+      "XL",
+      "XXL"
+    ],
+    "colour": "White",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-paisley-printed-mandarin-collar-straight-kurta-with-pyjamas--nehru-jacket/36102676/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Paisley Printed Mandarin Collar Straight Kurta With Pyjamas & Nehru Jacket",
+    "price": 5999,
+    "rating": 4.833333492279053,
+    "reviews": 6,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/15/bEyHbfzi_04319a81d5a642dab6da4da1b35d08ee.jpg",
+    "sizes": [
+      "L",
+      "S",
+      "M",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Cream",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-ethnic-motifs-printed-straight-kurta-with-pyjamas/31369351/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Ethnic Motifs Printed Straight Kurta with Pyjamas",
+    "price": 4499,
+    "rating": 4.818181991577148,
+    "reviews": 11,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/18/AXOH9iNS_21964d178a524bb387b13cfb51c01ff4.jpg",
+    "sizes": [
+      "L",
+      "S",
+      "M",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Blue",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-ethnic-motifs-woven-design-regular-kurta-with-pyjamas/26638240/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Ethnic Motifs Woven Design Regular Kurta with Pyjamas",
+    "price": 4999,
+    "rating": 4.800000190734863,
+    "reviews": 5,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/15/kLjH6uAa_1b57ef7832714c3eababdbb985df5772.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Pink",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-beige-ethnic-motifs-printed-kurta-with-pyjama/19886972/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Beige Ethnic Motifs Printed Kurta with Pyjama",
+    "price": 4499,
+    "rating": 4.800000190734863,
+    "reviews": 5,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/26/Frl9CjFj_5018b6866a904acf8bce75076dc09ab6.jpg",
+    "sizes": [
+      "XXL",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Beige",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-ethnic-motifs-printed-mandarin-collar-kurta-with-churidar/21758194/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Ethnic Motifs Printed Mandarin Collar Kurta with Churidar",
+    "price": 4999,
+    "rating": 4.800000190734863,
+    "reviews": 5,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/18/QclfTQJ5_a44661f1fffe45bb9daa47dff95ef5e8.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Grey",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-white-jacquard-kurta-with-pyjamas/13197170/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men White Jacquard Kurta with Pyjamas",
+    "price": 4999,
+    "rating": 4.714285850524902,
     "reviews": 7,
+    "image": "https://assets.myntassets.com/assets/images/productimage/2020/12/9/795ea32a-2869-42ef-bcea-02bdbdde7fe61607496009130-1.jpg",
+    "sizes": [
+      "3XL"
+    ],
+    "colour": "White",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-geometric-printed-mandarin-collar-regular-straight-kurta-with-pyjamas/34841274/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Geometric Printed Mandarin Collar Regular Straight Kurta with Pyjamas",
+    "price": 4499,
+    "rating": 4.666666507720947,
+    "reviews": 6,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/18/XVgZ6QDy_3fd3990f356a4e9e9d1d5300060a0d5d.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Cream",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-embroidered-regular-sequinned-kurta-with-pyjamas/31608344/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Embroidered Regular Sequinned Kurta with Pyjamas",
+    "price": 4499,
+    "rating": 4.666666507720947,
+    "reviews": 6,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/15/J8ltauD1_fc684a7b2ac34db3b85408122baa6503.jpg",
+    "sizes": [
+      "XL",
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ],
+    "colour": "Maroon",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-beige-art-silk-printed-kurta-with-pyjamas/19886878/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Beige Art Silk Printed Kurta With Pyjamas",
+    "price": 4999,
+    "rating": 4.657534122467041,
+    "reviews": 73,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/26/WPBtQEkf_5fe6f5d26b4049cba10af609f8d2fb07.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Beige",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-ethnic-motifs-printed-mandarin-collar-art-silk-kurta-with-pyjamas/24659350/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Ethnic Motifs Printed Mandarin Collar Art Silk Kurta with Pyjamas",
+    "price": 4999,
+    "rating": 4.657534122467041,
+    "reviews": 73,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/26/84ZcTA29_8edfa8b7bff947f9aebad2dee96eb233.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Green",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-mandarin-collar-long-sleeves-regular-kurta-with-pyjamas--jacket/26816836/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Mandarin Collar Long Sleeves Regular Kurta With Pyjamas & Jacket",
+    "price": 7999,
+    "rating": 4.367647171020508,
+    "reviews": 68,
+    "image": "https://assets.myntassets.com/assets/images/26816836/2024/1/7/a71b92e1-9aeb-43c1-9bb9-5762aeb8261a1704613965486ManyavarMenGreenRegularKurtawithPyjamas1.jpg",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Green",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-ethnic-motifs-embroidered-regular-thread-work-kurta-with-pyjamas/38612946/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Ethnic Motifs Embroidered Regular Thread Work Kurta with Pyjamas",
+    "price": 5499,
+    "rating": 4.333333492279053,
+    "reviews": 6,
+    "image": "https://assets.myntassets.com/assets/images/2026/JANUARY/19/QHKVQd5E_c656f98a4192443983a12aec523ba742.jpg",
+    "sizes": [
+      "3XL",
+      "XXXL"
+    ],
+    "colour": "Cream",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-floral-embroidered-mandarin-collar-sequinned-straight-kurta-with-pyjamas/33309890/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Floral Embroidered Mandarin Collar Sequinned Straight Kurta With Pyjamas",
+    "price": 4999,
+    "rating": 4.235294342041016,
+    "reviews": 17,
+    "image": "https://assets.myntassets.com/assets/images/2025/MARCH/24/0djXnjP0_a0102438e1ed4a2fb8dce3b99e7e40ea.jpg",
+    "sizes": [
+      "XXL",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Navy Blue",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-mandarin-collar-floral-printed-regular-kurta-with-pyjamas/22261420/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Mandarin Collar Floral Printed Regular Kurta with Pyjamas",
+    "price": 4999,
+    "rating": 4,
+    "reviews": 25,
+    "image": "https://assets.myntassets.com/assets/images/22261420/2023/3/9/4d861118-0a47-4937-992b-e81d6a318dc81678350473989ManyavarMenOliveGreenPrintedRegularKurtawithPyjamas1.jpg",
+    "sizes": [
+      "XL",
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ],
+    "colour": "Olive",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-embroidered-self-design-kurta-pyjama-set/31608351/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Embroidered Self Design Kurta Pyjama Set",
+    "price": 5499,
+    "rating": 4.199999809265137,
+    "reviews": 5,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/18/OazIMYd4_58a1fbf2fb484124b3df0ecccfcdc6db.jpg",
+    "sizes": [
+      "XL",
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ],
+    "colour": "Lavender",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-sequinned-embroidered-regular-kurta-with-pyjamas/25785968/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Sequinned Embroidered Regular Kurta With Pyjamas",
+    "price": 6999,
+    "rating": 4.285714149475098,
+    "reviews": 21,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/18/BjuLHNw5_7f6cb59032e0492fa2d24c0243e8b257.jpg",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Navy Blue",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-ethnic-motifs-printed-kurta-with-pyjamas/25786082/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Ethnic Motifs Printed Kurta With Pyjamas",
+    "price": 5499,
+    "rating": 4.079999923706055,
+    "reviews": 25,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/15/yE5RTDi9_e730641fff224e15a20e582e308695e7.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Purple",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-floral-embroidered-regular-kurta-with-pyjamas-and-jacket/32076596/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Floral Embroidered Regular Kurta with Pyjamas And Jacket",
+    "price": 7999,
+    "rating": 4.181818008422852,
+    "reviews": 11,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/15/3wfLQpci_b5ff3961d77a455795204a9c07b87e93.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Pink",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-ethnic-motifs-embroidered-regular-thread-work-kurta-with-pyjamas/40185541/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Ethnic Motifs Embroidered Regular Thread Work Kurta with Pyjamas",
+    "price": 5499,
+    "rating": 4.199999809265137,
+    "reviews": 5,
+    "image": "https://assets.myntassets.com/assets/images/2026/MARCH/25/qK4ItIKe_272e31fe2ccb4493b18e1e2273615dda.jpg",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Yellow",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-floral-embroidered-straight-thread-work-republic-day-kurta-with-pyjamas/30909900/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Floral Embroidered Straight Thread Work Republic Day Kurta with Pyjamas",
+    "price": 5499,
+    "rating": 4.0714287757873535,
+    "reviews": 168,
+    "image": "https://assets.myntassets.com/assets/images/30909900/2024/9/19/160df730-4022-451c-a09e-eba19631b28a1726685779097-Manyavar-Men-Ethnic-Motifs-Embroidered-Regular-Thread-Work-K-1.jpg",
+    "sizes": [
+      "XXL",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Green",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-floral-embroidered-mandarin-collar-thread-work-straight-kurta-with-pyjama/33309877/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Floral Embroidered Mandarin Collar Thread Work Straight Kurta With Pyjama",
+    "price": 5499,
+    "rating": 4.235294342041016,
+    "reviews": 17,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/18/7QnhIMV7_dad95484920f4efc858d88cfaffbde69.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Purple",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-ethnic-motifs-embroidered-regular-thread-work-kurta-with-pyjamas/38282324/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Ethnic Motifs Embroidered Regular Thread Work Kurta with Pyjamas",
+    "price": 6499,
+    "rating": 4.199999809265137,
+    "reviews": 5,
+    "image": "https://assets.myntassets.com/assets/images/2026/JANUARY/19/h6qi5A6j_b09fa751a33246bbb4c9349692326bad.jpg",
+    "sizes": [
+      "L",
+      "S",
+      "M",
+      "XL",
+      "XXL"
+    ],
     "colour": "Off White",
-    "sizes": [],
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-men-teal-green-kurta-with-dhoti-pants-with-nehru-jacket-set/18227374/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Men Teal Green Kurta with Dhoti Pants With Nehru Jacket Set",
+    "price": 4204,
+    "rating": 4.9285712242126465,
+    "reviews": 14,
+    "image": "https://assets.myntassets.com/assets/images/18227374/2022/6/3/3f21eba9-c67b-4071-a5eb-e0a0603c24a61654239640717-KISAH-Men-Teal-Green-Kurta-with-Dhoti-Pants-With-Nehru-Jacke-7.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Teal",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-men-maroon-solid-kurta-with-trousers-silk-set/36996024/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Men Maroon Solid Kurta with Trousers Silk Set",
+    "price": 4099,
+    "rating": 4.833333492279053,
+    "reviews": 6,
+    "image": "https://assets.myntassets.com/assets/images/2025/SEPTEMBER/17/p9eESVZw_ed53d1835c564f278e22864827a8f651.jpg",
+    "sizes": [
+      "XL",
+      "44",
+      "S",
+      "M",
+      "L"
+    ],
+    "colour": "Maroon",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-men-peach--cream-coloured-kurta-with-dhoti-pants--nehru-jacket/18227378/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Men Peach & Cream-Coloured Kurta with Dhoti Pants & Nehru Jacket",
+    "price": 4499,
+    "rating": 4.800000190734863,
+    "reviews": 5,
+    "image": "https://assets.myntassets.com/assets/images/18227378/2022/6/3/2b18b94e-9a88-4885-8bb4-056e84a6816c1654239989754-KISAH-Men-Peach--Cream-Coloured-Kurta-with-Dhoti-Pants--Nehr-1.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Peach",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-navy-blue-mandarin-collar-straight-kurta--churidar-with-printed-nehru-jacket-set/24978804/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Navy Blue Mandarin Collar Straight Kurta & Churidar With Printed Nehru Jacket Set",
+    "price": 7499,
+    "rating": 4.800000190734863,
+    "reviews": 5,
+    "image": "https://assets.myntassets.com/assets/images/24978804/2023/9/14/07bddfc4-7e78-40e6-afcd-8c319bc649f61694677198083KISAHMenMulticoloredKurtaJacketSet7.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Peach",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-men-wine-solid-kurta-with-trousers-set/36995981/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Men Wine Solid Kurta with Trousers Set",
+    "price": 4503,
+    "rating": 4.714285850524902,
+    "reviews": 7,
+    "image": "https://assets.myntassets.com/assets/images/2025/SEPTEMBER/17/PKJAy6TG_a3f45d52e304477385223fcc703bf8ba.jpg",
+    "sizes": [
+      "XL",
+      "44",
+      "S",
+      "M",
+      "L"
+    ],
+    "colour": "Burgundy",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-mandarin-collar-straight-kurta--trousers-with-jacket/25132316/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Mandarin Collar Straight Kurta & Trousers With Jacket",
+    "price": 8372,
+    "rating": 4.666666507720947,
+    "reviews": 6,
+    "image": "https://assets.myntassets.com/assets/images/25132316/2023/9/23/25c2a940-2f7d-4efe-b3d4-46f0ff0c85ab1695472242739KISAHMenOliveGreenRegularKurtawithTrousers1.jpg",
+    "sizes": [
+      "L",
+      "42",
+      "S",
+      "M",
+      "XL"
+    ],
+    "colour": "Olive",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-men-regular-thread-work-kurta-with-trousers/38032482/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Men Regular Thread Work Kurta with Trousers",
+    "price": 6004,
+    "rating": 4.65217399597168,
+    "reviews": 23,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/18/QteF9AeQ_ade9587554534ee6b51c67c49bdbe128.jpg",
+    "sizes": [
+      "XL",
+      "44",
+      "S",
+      "M",
+      "L"
+    ],
+    "colour": "Gold",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-straight-regular-dupion-silk-kurta-with-trousers--nehru-jacket/29132250/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Straight Regular Dupion Silk Kurta with Trousers & Nehru Jacket",
+    "price": 4780,
+    "rating": 4.599999904632568,
+    "reviews": 10,
+    "image": "https://assets.myntassets.com/assets/images/29132250/2024/10/9/02a8756a-2195-4dd7-9b7d-36f60a093a0f1728460204514-KISAH-Straight-Regular-Dupion-Silk-Kurta-with-Trousers--Nehr-1.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Off White",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-men-maroon--beige-kurta-with-churidar--nehru-jacket/18227384/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Men Maroon & Beige Kurta with Churidar & Nehru Jacket",
+    "price": 7899,
+    "rating": 4.599999904632568,
+    "reviews": 10,
+    "image": "https://assets.myntassets.com/assets/images/18227384/2022/7/21/fed348de-101b-452d-8131-633c5cdcdfef1658389747754-KISAH-Men-Maroon--Beige-Kurta-with-Churidar--Nehru-Jacket-81-7.jpg",
+    "sizes": [
+      "M",
+      "40",
+      "S",
+      "L",
+      "XL"
+    ],
+    "colour": "Maroon",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/jacquard-kurta-jacket-set-with-churidar/38423822/buy",
+    "retailer": "Myntra",
+    "title": "Jacquard Kurta Jacket Set with Churidar",
+    "price": 5800,
+    "rating": 4.583333492279053,
+    "reviews": 24,
+    "image": "https://assets.myntassets.com/assets/images/2025/DECEMBER/12/t5YXDp5c_3cf1b1babcb148a2b5df61e73b09b6c2.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "XS",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "3XL",
+      "4XL",
+      "5XL"
+    ],
+    "colour": "Lavender",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-maroon-solid-kurta-with-churidar--nehru-jacket/13460470/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Maroon Solid Kurta with Churidar & Nehru Jacket",
+    "price": 6999,
+    "rating": 4.55555534362793,
+    "reviews": 9,
+    "image": "https://assets.myntassets.com/assets/images/13460470/2021/1/28/174dcd94-bebe-414e-b40d-c774781019e51611809910840-Manyavar-Men-Maroon-Solid-Kurta-with-Churidar--Nehru-Jacket--1.jpg",
+    "sizes": [
+      "L",
+      "S",
+      "M",
+      "XL"
+    ],
+    "colour": "Maroon",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-men-solid-kurta-with-trousers/36718221/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Men Solid Kurta with Trousers",
+    "price": 6369,
+    "rating": 4.545454502105713,
+    "reviews": 11,
+    "image": "https://assets.myntassets.com/assets/images/2025/SEPTEMBER/12/VJhWvyhF_3354e89e02cf4d38bd82e575f3afe078.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Navy Blue",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-ethnic-motifs-blue-mandarin-collar-kurta-and-churidar-with-woven-design-nehru-jacket-set/25257310/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Ethnic Motifs Blue Mandarin Collar Kurta And Churidar With Woven Design Nehru jacket Set",
+    "price": 7399,
+    "rating": 4.545454502105713,
+    "reviews": 11,
+    "image": "https://assets.myntassets.com/assets/images/25257310/2023/9/28/12d0e1b4-9095-4b3f-a1da-4c982fd7e5981695916309675KISAHMenBlueEthnicMotifsRegularKurtawithChuridar1.jpg",
+    "sizes": [
+      "L",
+      "42",
+      "S",
+      "M",
+      "XL"
+    ],
+    "colour": "Blue",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-peach-coloured-ethnic-motifs-printed-nehru-jacket-with-solid-kurta--churidar/19887094/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Peach-Coloured Ethnic Motifs Printed Nehru Jacket with Solid Kurta & Churidar",
+    "price": 6999,
+    "rating": 4.538461685180664,
+    "reviews": 13,
+    "image": "https://assets.myntassets.com/assets/images/19887094/2022/9/20/ace2bd52-2ab4-4cae-926e-2ffaf7a19fa71663651821377-Manyavar-Men-Kurta-Sets-4221663651820647-1.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Peach",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-green-ethnic-motifs-yoke-design-kurta-with-churidar--jacket/19886814/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Green Ethnic Motifs Yoke Design Kurta with Churidar & Jacket",
+    "price": 6999,
+    "rating": 4.538461685180664,
+    "reviews": 13,
+    "image": "https://assets.myntassets.com/assets/images/19886814/2022/9/19/580f492d-7c32-412d-9a01-12ff72d54cac1663573899368-Manyavar-Men-Kurta-Sets-8271663573898676-1.jpg",
+    "sizes": [
+      "XL",
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ],
+    "colour": "Green",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-mandarin-collar-straight-kurta-with-woven-design-jacket-trouser-set/32465093/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Mandarin Collar Straight Kurta With Woven Design Jacket Trouser Set",
+    "price": 6639,
+    "rating": 4.5,
+    "reviews": 8,
+    "image": "https://assets.myntassets.com/assets/images/2026/OCTOBER/9/25b5f5b65c9e4f35845805ea9015f541.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "XS",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Blue",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-jacquard-mid-kurta-jacket-set-with-trouser/37784169/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Jacquard Mid Kurta Jacket Set with Trouser",
+    "price": 5004,
+    "rating": 4.5,
+    "reviews": 20,
+    "image": "https://assets.myntassets.com/assets/images/2026/OCTOBER/30/2f602e99d0a14cd5a6922c162cf520df.jpg",
+    "sizes": [
+      "XL",
+      "44",
+      "S",
+      "M",
+      "L"
+    ],
+    "colour": "Black",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah--jacquard-kurta-jacket-set-with-churidar/31377645/buy",
+    "retailer": "Myntra",
+    "title": "KISAH  Jacquard Kurta Jacket Set with Churidar",
+    "price": 4005,
+    "rating": 4.5,
+    "reviews": 20,
+    "image": "https://assets.myntassets.com/assets/images/31377645/2024/10/23/ff3c522b-5715-45ce-a584-777bda6757b91729667728136-KISAH-Men-Regular-Kurta-with-Churidar-5451729667727710-1.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Black",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-cream-coloured-solid-kurta--churidar-with-nehru-jacket/19364628/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Cream-Coloured Solid Kurta & Churidar with Nehru Jacket",
+    "price": 6999,
+    "rating": 4.5,
+    "reviews": 6,
+    "image": "https://assets.myntassets.com/assets/images/19364628/2022/8/23/0f4d308b-ab0c-454a-843b-ce7ef11b56221661237819985-Manyavar-Men-Kurta-Sets-511661237819144-1.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Cream",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-peach-coloured--off-white-solid-kurta-set-with-nehru-jacket-and-dupatta/19364670/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Peach-Coloured & Off-White Solid Kurta Set with Nehru Jacket and Dupatta",
+    "price": 6999,
+    "rating": 4.5,
+    "reviews": 8,
+    "image": "https://assets.myntassets.com/assets/images/19364670/2022/8/23/d9bcdfc6-0542-44f0-ad3f-41e9432c2e5d1661241025722-Manyavar-Men-Kurta-Sets-31661241024759-1.jpg",
+    "sizes": [
+      "L",
+      "S",
+      "M",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Peach",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-mandarin-collar-kurta-with-pyjama-and-nehru-jacket/31894457/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Mandarin Collar Kurta with Pyjama and Nehru Jacket",
+    "price": 4999,
+    "rating": 4.5,
+    "reviews": 16,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/15/4qdj7ghT_4cc3f940837b43f387dd38133915284f.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Purple",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kraft+india+luxe/kraft-india-luxe-men-floral-embroidered-kurta--trousers-with-nehru-jacket/31086669/buy",
+    "retailer": "Myntra",
+    "title": "KRAFT INDIA LUXE Men Floral Embroidered Kurta & Trousers With Nehru Jacket",
+    "price": 5937,
+    "rating": 4.489361763000488,
+    "reviews": 47,
+    "image": "https://assets.myntassets.com/assets/images/31086669/2024/11/8/42e6a5b5-e077-4f2f-8ad3-c4b0fb06ed2c1731078067193-KRAFT-INDIA-LUXE-Men-Floral-Embroidered-Kurta--Trousers-With-1.jpg",
+    "sizes": [
+      "M",
+      "38",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Blue",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kraft+india+luxe/kraft-india-luxe-men-embroidered-regular-sequinned-kurta--trousers-with-nehru-jacket/31086676/buy",
+    "retailer": "Myntra",
+    "title": "KRAFT INDIA LUXE Men Embroidered Regular Sequinned Kurta & Trousers With Nehru Jacket",
+    "price": 6557,
+    "rating": 4.489361763000488,
+    "reviews": 47,
+    "image": "https://assets.myntassets.com/assets/images/2024/SEPTEMBER/24/r0UvxixP_8936389c81e2499e83a8d19ef6739869.jpg",
+    "sizes": [
+      "M",
+      "38",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Mauve",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-mandarin-collar-straight-kurta--trouser-with-embroidered-nehru-jacket/31367331/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Mandarin Collar Straight Kurta & Trouser With Embroidered Nehru Jacket",
+    "price": 4000,
+    "rating": 4.481481552124023,
+    "reviews": 27,
+    "image": "https://assets.myntassets.com/assets/images/31367331/2024/10/23/db729a1f-ee9f-4f4a-960c-9df344bca5531729667120155-KISAH-Men-Regular-Kurta-with-Trousers-721729667119609-1.jpg",
+    "sizes": [
+      "XL",
+      "44",
+      "S",
+      "M",
+      "L"
+    ],
+    "colour": "Lavender",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-jacquard-mid-kurta-jacket-set-with-trouser/30831934/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Jacquard Mid Kurta Jacket Set with Trouser",
+    "price": 5174,
+    "rating": 4.476190567016602,
+    "reviews": 42,
+    "image": "https://assets.myntassets.com/assets/images/30831934/2024/9/25/fba947be-5c21-491b-a579-cf399bfe1cb91727275154878-KISAH-Men-Regular-Fit-Woven-Design-Kurta-Nehru-Jacket-Trouse-1.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "XS",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Green",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-red--beige-solid-kurta-with-churidar--nehru-jacket/13518028/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Red & Beige Solid Kurta with Churidar & Nehru Jacket",
+    "price": 5999,
+    "rating": 4.46875,
+    "reviews": 32,
+    "image": "https://assets.myntassets.com/assets/images/13518028/2021/2/3/48ff2366-2b27-49a8-8390-c72c4718d5bc1612344255721-Manyavar-Men-Red--Blue-Solid-Kurta-with-Churidar-23016123442-1.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Red",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-black-regular-kurta-with-trousers--nehru-jacket-set/25537628/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Black Regular Kurta With Trousers & Nehru Jacket Set",
+    "price": 7698,
+    "rating": 4.4666666984558105,
+    "reviews": 15,
+    "image": "https://assets.myntassets.com/assets/images/25537628/2023/10/18/0f74a5fd-0a68-4644-b563-dfe9ae03ee461697633022267KISAHMenBlackRegularKurtawithTrousers1.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Black",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-black-embroidered-mandarin-collar-long-sleeves-kurta-jacket-with-trousers-set/28906754/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Black Embroidered Mandarin Collar Long Sleeves Kurta Jacket with Trousers Set",
+    "price": 4084,
+    "rating": 4.459183692932129,
+    "reviews": 98,
+    "image": "https://assets.myntassets.com/assets/images/28906754/2024/4/13/0429c8d9-4c03-48cd-b790-0a4d625e62361712996960349KisahMenBlackKurtaJacketTrouserSet1.jpg",
+    "sizes": [
+      "L",
+      "42",
+      "S",
+      "M",
+      "XL"
+    ],
+    "colour": "Black",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah--printed-kurta-jacket-set-with-churidar/22220680/buy",
+    "retailer": "Myntra",
+    "title": "KISAH  Printed Kurta Jacket Set with Churidar",
+    "price": 4005,
+    "rating": 4.457446575164795,
+    "reviews": 94,
+    "image": "https://assets.myntassets.com/assets/images/22220680/2023/3/3/6eb10179-dd69-4d85-9110-062d31739d8e1677853510745KisahMenWhiteKurtaJacketSet1.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "White",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/tulsattva/tulsattva-men-white-kurta-with-churidar--nehru-jacket/16376802/buy",
+    "retailer": "Myntra",
+    "title": "Tulsattva Men White Kurta with Churidar & Nehru Jacket",
+    "price": 6590,
+    "rating": 4.454545497894287,
+    "reviews": 11,
+    "image": "https://assets.myntassets.com/assets/images/16376802/2021/12/11/9b33e58e-fe86-4ef6-8ab9-c3ffaa10a94c1639210087826TulsattvaKurtaKurtaSetsTulsattvaMenKurtaSetsTulsattvaMenKurt1.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "White",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/printed-kurta-jacket-set-with-dhoti/22220700/buy",
+    "retailer": "Myntra",
+    "title": "Printed Kurta Jacket Set with Dhoti",
+    "price": 5004,
+    "rating": 4.4462809562683105,
+    "reviews": 121,
+    "image": "https://assets.myntassets.com/assets/images/22220700/2024/11/1/2636f3fa-3bf4-4bb8-be41-b30ba95a84251730451391521-KISAH-Men-Abstract-Printed-Regular-Fit-Kurta-Jacket-Dhoti-Se-1.jpg",
+    "sizes": [
+      "L",
+      "42",
+      "XS",
+      "S",
+      "M",
+      "XL"
+    ],
+    "colour": "Rust",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-mandarin-collar-regular-kurta-with-churidar-with-nehru-jacket/29034184/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Mandarin Collar Regular Kurta with Churidar With Nehru jacket",
+    "price": 7999,
+    "rating": 4.44444465637207,
+    "reviews": 9,
+    "image": "https://assets.myntassets.com/assets/images/2025/NOVEMBER/15/9n7WaBuJ_d9aedf18a76a478d9b76998035d2441d.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Cream",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-embroidered-regular-thread-work-kurta-and-pyjamas-with-jacket/30909968/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Embroidered Regular Thread Work Kurta and Pyjamas with Jacket",
+    "price": 7999,
+    "rating": 4.44444465637207,
+    "reviews": 9,
+    "image": "https://assets.myntassets.com/assets/images/2024/SEPTEMBER/13/0IJvUZ5x_29060de028c74427852b8d4ae89696b9.jpg",
+    "sizes": [
+      "XL",
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ],
+    "colour": "Grey",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/house+of+pataudi/house-of-pataudi-men-kurta-with-wide-leg-bottom-and-animal-jacquard-work-jacket/40594839/buy",
+    "retailer": "Myntra",
+    "title": "House of Pataudi Men Kurta With Wide Leg Bottom And Animal Jacquard Work Jacket",
+    "price": 4287,
+    "rating": 4.295597553253174,
+    "reviews": 159,
+    "image": "https://assets.myntassets.com/assets/images/2026/AUGUST/19/ed428e4c0d084d848c4e39e636e4828a.jpg",
+    "sizes": [
+      "M",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Cream",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-printed-purple-mandarin-collar-straight-kurta-with-trousers--jacket-cotton-set/30831917/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Printed Purple Mandarin Collar Straight Kurta With Trousers & Jacket Cotton Set",
+    "price": 4549,
+    "rating": 4.024844646453857,
+    "reviews": 161,
+    "image": "https://assets.myntassets.com/assets/images/2026/OCTOBER/14/13bbd6d5e1374a3db802549abe516cba.jpg",
+    "sizes": [
+      "XL",
+      "44",
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XXL",
+      "3XL",
+      "4XL",
+      "5XL"
+    ],
+    "colour": "Purple",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-men-navy-blue-regular-straight-kurta-with-trouser--nehru-jacket-set/33581870/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Men Navy Blue Regular Straight Kurta with Trouser & Nehru Jacket Set",
+    "price": 6499,
+    "rating": 4.20895528793335,
+    "reviews": 67,
+    "image": "https://assets.myntassets.com/assets/images/2026/OCTOBER/9/56ce7ce66bb346e2b5f149761bae40ed.jpg",
+    "sizes": [
+      "L",
+      "42",
+      "S",
+      "M",
+      "XL"
+    ],
+    "colour": "Navy Blue",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-ethnic-motifs-woven-design-mandarin-collar-kurta--trousers-with-nehru-jacket-set/31072670/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Ethnic Motifs Woven Design Mandarin Collar Kurta & Trousers With Nehru Jacket Set",
+    "price": 5999,
+    "rating": 4.214285850524902,
+    "reviews": 210,
+    "image": "https://assets.myntassets.com/assets/images/2026/OCTOBER/17/81c73270c0f241eea8bbcc1c37dc08c9.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Maroon",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-ethnic-motifs-woven-design-regular-kurta--trousers-with-nehru-jacket-set/28906726/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Ethnic Motifs Woven Design Regular Kurta & Trousers With Nehru Jacket Set",
+    "price": 6253,
+    "rating": 4.233576774597168,
+    "reviews": 137,
+    "image": "https://assets.myntassets.com/assets/images/2026/OCTOBER/9/bc1015a6205d490f841c1048fb64644d.jpg",
+    "sizes": [
+      "XL",
+      "44",
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colour": "Mauve",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kraft+india+luxe/kraft-india-luxe-embroidered-mandarin-collar-sequinned-kurta-with-trousers/37005845/buy",
+    "retailer": "Myntra",
+    "title": "KRAFT INDIA LUXE Embroidered Mandarin Collar Sequinned Kurta With Trousers",
+    "price": 4100,
+    "rating": 4.046875,
+    "reviews": 64,
+    "image": "https://assets.myntassets.com/assets/images/2026/JANUARY/9/IJkGyV8V_8a31f1bfd40a497c93e4012f98eea55d.jpg",
+    "sizes": [
+      "S",
+      "36",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Cream",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah--heritage-printed-kurta-jacket-set-with-dhoti/22220666/buy",
+    "retailer": "Myntra",
+    "title": "KISAH  Heritage Printed Kurta Jacket Set with Dhoti",
+    "price": 4966,
+    "rating": 4.169826030731201,
+    "reviews": 1266,
+    "image": "https://assets.myntassets.com/assets/images/2026/OCTOBER/18/43854034b13c4278b3aaea479df1a720.jpg",
+    "sizes": [
+      "XL",
+      "44",
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XXL",
+      "3XL",
+      "4XL",
+      "5XL"
+    ],
+    "colour": "Maroon",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kraft+india+luxe/kraft-india-luxe-ethnic-motifs-embroidered-sequinned-kurta-with-trousers/37005840/buy",
+    "retailer": "Myntra",
+    "title": "KRAFT INDIA LUXE Ethnic Motifs Embroidered Sequinned Kurta With Trousers",
+    "price": 4100,
+    "rating": 4.046875,
+    "reviews": 64,
+    "image": "https://assets.myntassets.com/assets/images/2025/SEPTEMBER/16/RkYy7UyY_242b2a9b1e8e41ca8344c3d2f9c8f89e.jpg",
+    "sizes": [
+      "L",
+      "40",
+      "S",
+      "M",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Grey",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-men-solid-kurta-with-trousers-set/36718225/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Men Solid Kurta with Trousers Set",
+    "price": 5459,
+    "rating": 4.093264102935791,
+    "reviews": 193,
+    "image": "https://assets.myntassets.com/assets/images/2025/SEPTEMBER/3/qWqJYQAG_21b8cfc04aaa45d48209ec869431d7fb.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Black",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/jacquard-mid-kurta-jacket-set-with-trouser/31367337/buy",
+    "retailer": "Myntra",
+    "title": "Jacquard Mid Kurta Jacket Set with Trouser",
+    "price": 5979,
+    "rating": 4.075268745422363,
+    "reviews": 93,
+    "image": "https://assets.myntassets.com/assets/images/2026/NOVEMBER/3/e4a947a914ab49b7b14779bbbcf3ffbe.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "White",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-printed-kurta-jacket-set-with-churidar/25189874/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Printed Kurta Jacket Set with Churidar",
+    "price": 4005,
+    "rating": 4.169826030731201,
+    "reviews": 1266,
+    "image": "https://assets.myntassets.com/assets/images/2026/OCTOBER/10/af93eb23422a4237881651d209910f55.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "XS",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "3XL",
+      "4XL",
+      "5XL"
+    ],
+    "colour": "Burgundy",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-jacquard-kurta-jacket-set-with-churidar/27549970/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Jacquard Kurta Jacket Set with Churidar",
+    "price": 4511,
+    "rating": 4.119999885559082,
+    "reviews": 100,
+    "image": "https://assets.myntassets.com/assets/images/2026/OCTOBER/14/ea08c73375b74100877dc88dd54462b7.jpg",
+    "sizes": [
+      "M",
+      "40",
+      "S",
+      "L",
+      "XL"
+    ],
+    "colour": "Grey",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/printed-mid-kurta-jacket-set-with-trouser/31367332/buy",
+    "retailer": "Myntra",
+    "title": "Printed Mid Kurta Jacket Set with Trouser",
+    "price": 4804,
+    "rating": 4.346590995788574,
+    "reviews": 176,
+    "image": "https://assets.myntassets.com/assets/images/2026/NOVEMBER/3/0ce48fdfacf14d899091c1d49548daf5.jpg",
+    "sizes": [
+      "XS",
+      "36",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "3XL",
+      "4XL",
+      "5XL"
+    ],
+    "colour": "Beige",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kraft+india+luxe/kraft-india-luxe-men-solid-kurta-with-pyjama--nehru-jacket/37005864/buy",
+    "retailer": "Myntra",
+    "title": "KRAFT INDIA LUXE Men Solid Kurta with Pyjama & Nehru Jacket",
+    "price": 4501,
+    "rating": 4.404255390167236,
+    "reviews": 47,
+    "image": "https://assets.myntassets.com/assets/images/2025/SEPTEMBER/16/ww8wplHF_8b3d71d27800489f84080e1342210364.jpg",
+    "sizes": [
+      "M",
+      "38",
+      "S",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Navy Blue",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-jacquard-mid-kurta-jacket-set-with-trouser/28906758/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Jacquard Mid Kurta Jacket Set with Trouser",
+    "price": 4993,
+    "rating": 4.07692289352417,
+    "reviews": 39,
+    "image": "https://assets.myntassets.com/assets/images/28906758/2024/4/13/22ddf0b5-d3d0-46b1-8ca3-1d32495734491712997508355KisahMenBurgundyKurtaJacketTrouserSet1.jpg",
+    "sizes": [
+      "XL",
+      "44",
+      "S",
+      "M",
+      "L"
+    ],
+    "colour": "Burgundy",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-jacquard-kurta-jacket-set-with-churidar/25520018/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Jacquard Kurta Jacket Set with Churidar",
+    "price": 5305,
+    "rating": 4.075268745422363,
+    "reviews": 93,
+    "image": "https://assets.myntassets.com/assets/images/25520018/2023/10/17/dbe76ade-8a68-4d31-b6cc-01f319ffcbf71697552429974KISAHMenWhiteRegularKurtawithChuridar1.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "White",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/embroidered-kurta-jacket-set-with-churidar-/25189864/buy",
+    "retailer": "Myntra",
+    "title": "Embroidered Kurta Jacket Set with Churidar",
+    "price": 4522,
+    "rating": 4.099236488342285,
+    "reviews": 262,
+    "image": "https://assets.myntassets.com/assets/images/25189864/2023/9/26/4bbd8621-6c38-42a4-b2d9-995218ddf2bb1695738345393KISAHMenBlackRegularKurtawithChuridar1.jpg",
+    "sizes": [
+      "XL",
+      "44",
+      "S",
+      "M",
+      "L"
+    ],
+    "colour": "Black",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah--jacquard-mid-kurta-jacket-set-with-trouser/35149355/buy",
+    "retailer": "Myntra",
+    "title": "KISAH  Jacquard Mid Kurta Jacket Set with Trouser",
+    "price": 5297,
+    "rating": 4.0757575035095215,
+    "reviews": 66,
+    "image": "https://assets.myntassets.com/assets/images/2025/AUGUST/10/zprUnptG_cf6cd280371f4395a517640ab7aacd54.jpg",
+    "sizes": [
+      "XL",
+      "44",
+      "S",
+      "M",
+      "L"
+    ],
+    "colour": "Green",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/jacquard-kurta-jacket-set-with-churidar/31377647/buy",
+    "retailer": "Myntra",
+    "title": "Jacquard Kurta Jacket Set with Churidar",
+    "price": 4439,
+    "rating": 4.329113960266113,
+    "reviews": 79,
+    "image": "https://assets.myntassets.com/assets/images/31377647/2024/10/23/7cfd5590-5fca-4deb-a47e-2b468f84b8ef1729667766987-KISAH-Men-Regular-Kurta-with-Churidar-3551729667766467-1.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Pink",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-embroidered-kurta-jacket-set-with-trouser/23066750/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Embroidered Kurta Jacket Set with Trouser",
+    "price": 5105,
+    "rating": 4.099236488342285,
+    "reviews": 262,
+    "image": "https://assets.myntassets.com/assets/images/2025/AUGUST/20/venfAL1H_375a25d61ab44fe3a70aaba92a72f0fe.jpg",
+    "sizes": [
+      "M",
+      "40",
+      "XS",
+      "S",
+      "L",
+      "XL",
+      "XXL",
+      "3XL",
+      "4XL",
+      "5XL"
+    ],
+    "colour": "Black",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/tasva/tasva-men-geometric-printed-kurta-with-trousers/37180635/buy",
+    "retailer": "Myntra",
+    "title": "Tasva Men Geometric Printed Kurta with Trousers",
+    "price": 7999,
+    "rating": 4.333333492279053,
+    "reviews": 6,
+    "image": "https://assets.myntassets.com/assets/images/2025/SEPTEMBER/25/nIZL1fPU_f025e6b18e184253976e533a9d13d424.jpg",
+    "sizes": [
+      "S",
+      "XS",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "3XL"
+    ],
+    "colour": "Beige",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kraft+india+luxe/kraft-india-luxe-men-kurta-with-trousers--embroidered-nehru-jacket/37005905/buy",
+    "retailer": "Myntra",
+    "title": "KRAFT INDIA LUXE Men Kurta with Trousers & Embroidered Nehru Jacket",
+    "price": 4628,
+    "rating": 4.404255390167236,
+    "reviews": 47,
+    "image": "https://assets.myntassets.com/assets/images/2025/SEPTEMBER/16/tGYrr8A0_2657204ad32e49298e815aacbc76aeaa.jpg",
+    "sizes": [
+      "XXL",
+      "44",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Purple",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-mandarin-collar-kurta-with-trousers-and-nehru-jacket/25189872/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Mandarin Collar Kurta with Trousers And Nehru Jacket",
+    "price": 4304,
+    "rating": 4.1518988609313965,
+    "reviews": 237,
+    "image": "https://assets.myntassets.com/assets/images/25189872/2023/9/27/6469ea08-9e82-4f1b-bab3-1b22a3daf6c21695790358160KISAHMenGreenRegularKurtawithTrousers1.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Green",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/kisah-lilac-straight-kurta-with-trousers--embroidered-nehru-jacket-set/31370194/buy",
+    "retailer": "Myntra",
+    "title": "KISAH Lilac Straight Kurta with Trousers & Embroidered Nehru Jacket Set",
+    "price": 5007,
+    "rating": 4.333333492279053,
+    "reviews": 6,
+    "image": "https://assets.myntassets.com/assets/images/2024/OCTOBER/21/gYc1XnkD_539b36b79c8a4e92bd22b1274e17ba28.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "XS",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Purple",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/printed-kurta-jacket-set-with-trouser/31367338/buy",
+    "retailer": "Myntra",
+    "title": "Printed Kurta Jacket Set with Trouser",
+    "price": 4323,
+    "rating": 4.282051086425781,
+    "reviews": 39,
+    "image": "https://assets.myntassets.com/assets/images/2024/OCTOBER/21/s2zjHgZq_a3351e28dad740d1adf3abd55e82122a.jpg",
+    "sizes": [
+      "S",
+      "38",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Black",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/vastramay/vastramay-men-ethnic-motifs-regular-sequinned-kurta-with-trousers--with-dupatta/31804951/buy",
+    "retailer": "Myntra",
+    "title": "VASTRAMAY Men Ethnic Motifs Regular Sequinned Kurta with Trousers & With Dupatta",
+    "price": 4171,
+    "rating": 4.35175895690918,
+    "reviews": 199,
+    "image": "https://assets.myntassets.com/assets/images/2024/NOVEMBER/30/l3ugZWKk_35c6cdef53ce4a7e817b4c73c1fe0078.jpg",
+    "sizes": [
+      "M",
+      "38",
+      "S",
+      "L",
+      "XL"
+    ],
+    "colour": "Peach",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/vastramay/vastramay-men-ethnic-motifs-regular-sequinned-kurta-with-trousers--with-dupatta/31804914/buy",
+    "retailer": "Myntra",
+    "title": "VASTRAMAY Men Ethnic Motifs Regular Sequinned Kurta with Trousers & With Dupatta",
+    "price": 4320,
+    "rating": 4.35175895690918,
+    "reviews": 199,
+    "image": "https://assets.myntassets.com/assets/images/2024/NOVEMBER/30/g5Jj849H_8cfe0c12399249ffafa79bcf43eb0574.jpg",
+    "sizes": [
+      "S",
+      "36",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Cream",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/vastramay/vastramay-men-red-rayon-patola-printed-kurta--trouser-with-dupatta-set/32906296/buy",
+    "retailer": "Myntra",
+    "title": "VASTRAMAY Men Red Rayon Patola Printed Kurta & Trouser with Dupatta Set",
+    "price": 4701,
+    "rating": 4.426229476928711,
+    "reviews": 61,
+    "image": "https://assets.myntassets.com/assets/images/2026/JUNE/4/aJYonljD_0e6ca9c3c8e042a3b6adcdf2b24be36b.jpg",
+    "sizes": [
+      "S",
+      "36",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Red",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/vastramay/vastramay-men-navy-blue-rayon-patola-printed-kurta--trouser-with-dupatta-set/32906288/buy",
+    "retailer": "Myntra",
+    "title": "VASTRAMAY Men Navy Blue Rayon Patola Printed Kurta & Trouser with Dupatta Set",
+    "price": 4701,
+    "rating": 4.416666507720947,
+    "reviews": 60,
+    "image": "https://assets.myntassets.com/assets/images/2026/JUNE/4/mDQHKMUI_6cc90f9ac0ad4a4ea5c1287505a5430b.jpg",
+    "sizes": [
+      "S",
+      "36",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Blue",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/kisah/embroidered-kurta-set-with-churidar/25189720/buy",
+    "retailer": "Myntra",
+    "title": "Embroidered Kurta Set with Churidar",
+    "price": 4387,
+    "rating": 4.2620320320129395,
+    "reviews": 374,
+    "image": "https://assets.myntassets.com/assets/images/25189720/2023/9/26/84640d4d-d746-4050-96af-e6164bc73d901695726403035KISAHMenBlackEmbroideredRegularMirrorWorkKurtawithDhotiPants1.jpg",
+    "sizes": [
+      "L",
+      "42",
+      "S",
+      "M",
+      "XL"
+    ],
+    "colour": "Black",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/jompers/jompers-men-floral-embroidered-regular-chikankari-kurta-with-pyjamas/33512815/buy",
+    "retailer": "Myntra",
+    "title": "Jompers Men Floral Embroidered Regular Chikankari Kurta with Pyjamas",
+    "price": 4567,
+    "rating": 4,
+    "reviews": 12,
+    "image": "https://assets.myntassets.com/assets/images/2025/APRIL/7/dXMB1d4M_69dca5a686d44ae286ae0ef3d41ce516.jpg",
+    "sizes": [
+      "XL",
+      "S",
+      "M",
+      "L",
+      "XXL"
+    ],
+    "colour": "Purple",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/tattva/tattva-men-solid-embroidered-kurta-with-dhoti-pants--dupatta/33831220/buy",
+    "retailer": "Myntra",
+    "title": "TATTVA Men Solid Embroidered Kurta with Dhoti Pants & Dupatta",
+    "price": 4235,
+    "rating": 4.5,
+    "reviews": 12,
+    "image": "https://assets.myntassets.com/assets/images/33831220/2025/6/28/426ee55a-5454-4e5c-bf8a-1e21c8482d0b1751116544681-TATTVA-Men-Solid-Embroidered-Kurta-with-Dhoti-Pants--Dupatta-1.jpg",
+    "sizes": [
+      "XL",
+      "44",
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colour": "Cream",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/vastramay/vastramay-men-black-embroidered-mirror-work-kurta-with-dhoti-pants--dupatta/20983048/buy",
+    "retailer": "Myntra",
+    "title": "VASTRAMAY Men Black Embroidered Mirror Work Kurta with Dhoti Pants & Dupatta",
+    "price": 7124,
+    "rating": 4.476190567016602,
+    "reviews": 42,
+    "image": "https://assets.myntassets.com/assets/images/20983048/2022/11/29/b8ee59cc-f9c7-4829-a371-c14c02a1aef91669720010637ShresthaByVastramayMensBlackMirrorWorkKurtaWithDhotiAndEmbel1.jpg",
+    "sizes": [
+      "S",
+      "36",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Black",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/vastramay/vastramay-embroidered-mirror-work-jacket-with-kurta-pyjama--dupatta/20973684/buy",
+    "retailer": "Myntra",
+    "title": "VASTRAMAY Embroidered Mirror Work Jacket With Kurta Pyjama & Dupatta",
+    "price": 4185,
+    "rating": 4.4375,
+    "reviews": 16,
+    "image": "https://assets.myntassets.com/assets/images/20973684/2023/2/7/93b82a72-cfef-4010-a95a-a81c225126c31675741433915-SHRESTHA-BY-VASTRAMAY-Men-Cream-Mirror-Work-Kurta-With-Trous-1.jpg",
+    "sizes": [
+      "XL",
+      "42",
+      "S",
+      "M",
+      "L"
+    ],
+    "colour": "Cream",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/vastramay/vastramay-men-maroon-solid-straight-kurta-with-pyjama--mirror-work-dupatta/20933630/buy",
+    "retailer": "Myntra",
+    "title": "VASTRAMAY Men Maroon Solid Straight Kurta With Pyjama & Mirror Work Dupatta",
+    "price": 5034,
+    "rating": 4.3255815505981445,
+    "reviews": 43,
+    "image": "https://assets.myntassets.com/assets/images/20933630/2023/2/7/1fde0eda-0a12-4f56-80db-4695259adb871675741160708-SHRESTHA-BY-VASTRAMAY-Men-Maroon-Mirror-Work-Kurta-with-Pyja-1.jpg",
+    "sizes": [
+      "L",
+      "40",
+      "S",
+      "M",
+      "XL"
+    ],
+    "colour": "Maroon",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/house+of+pataudi/house-of-pataudi-men-ethnic-motifs-embroidered-regular-thread-work-chanderi-silk-kurta-with-trousers--with/42276644/buy",
+    "retailer": "Myntra",
+    "title": "House of Pataudi Men Ethnic Motifs Embroidered Regular Thread Work Chanderi Silk Kurta with Trousers & With",
+    "price": 4082,
+    "rating": 4.227848052978516,
+    "reviews": 79,
+    "image": "https://assets.myntassets.com/assets/images/2026/AUGUST/10/sDIsLopC_df070c2f98cb47cd954be6008ff6ea33.jpg",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Yellow",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/house+of+pataudi/house-of-pataudi-men-ethnic-motifs-embroidered-regular-thread-work-chanderi-silk-kurta-with-trousers--with/42276645/buy",
+    "retailer": "Myntra",
+    "title": "House of Pataudi Men Ethnic Motifs Embroidered Regular Thread Work Chanderi Silk Kurta with Trousers & With",
+    "price": 4093,
+    "rating": 4.227848052978516,
+    "reviews": 79,
+    "image": "https://assets.myntassets.com/assets/images/2026/JUNE/9/M6C7WWGC_b8d5c519041844f380dc945d79f71508.jpg",
+    "sizes": [
+      "XXL",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Green",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/vastramay/vastramay-men-embroidered-regular-sequinned-kurta-with-trousers--with-dupatta/32973518/buy",
+    "retailer": "Myntra",
+    "title": "VASTRAMAY Men Embroidered Regular Sequinned Kurta with Trousers & With Dupatta",
+    "price": 5129,
+    "rating": 4.161904811859131,
+    "reviews": 210,
+    "image": "https://assets.myntassets.com/assets/images/2025/FEBRUARY/26/tnoUUgH2_a45d6474a3bc4a2da350240c1a8de35a.jpg",
+    "sizes": [
+      "S",
+      "36",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colour": "Black",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/manyavar/manyavar-men-off-white-ethnic-motifs-embroidered-kurta-with-dhoti-pants--dupatta/18325354/buy",
+    "retailer": "Myntra",
+    "title": "Manyavar Men Off White Ethnic Motifs Embroidered Kurta with Dhoti Pants & Dupatta",
+    "price": 4999,
+    "rating": 4.150000095367432,
+    "reviews": 20,
+    "image": "https://assets.myntassets.com/assets/images/18325354/2022/5/26/22fdd00f-986f-4106-9498-c6e3b7c6d3291653565782355-Kurta-South-Dhoti-Set-8961653565781861-1.jpg",
+    "sizes": [
+      "L",
+      "S",
+      "M",
+      "XL",
+      "XXL"
+    ],
+    "colour": "Off White",
+    "audience": "Men",
+    "category": "kurta",
+    "occasions": [
+      "wedding"
+    ]
+  },
+  {
+    "url": "https://www.myntra.com/kurta-sets/vastramay/vastramay-men-regular-sequinned-kurta-with-trousers--with-dupatta/42047335/buy",
+    "retailer": "Myntra",
+    "title": "VASTRAMAY Men Regular Sequinned Kurta with Trousers & With Dupatta",
+    "price": 4215,
+    "rating": 4.137930870056152,
+    "reviews": 29,
+    "image": "https://assets.myntassets.com/assets/images/2026/MAY/11/wAJRHu4R_50912e6da0704f9780c65cdb84ea23cf.jpg",
+    "sizes": [
+      "5XL",
+      "50",
+      "XXL",
+      "3XL",
+      "4XL",
+      "6XL",
+      "7XL"
+    ],
+    "colour": "Off White",
     "audience": "Men",
     "category": "kurta",
     "occasions": [
