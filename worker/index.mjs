@@ -83,18 +83,13 @@ async function liveProducts(query, range, key) {
   return rankProducts([...direct,...offers.flatMap(result => result.status === 'fulfilled' ? result.value : [])],range);
 }
 
-async function products(request, url, env, context) {
+async function products(url, env) {
   const query = (url.searchParams.get('q') ?? '').trim().replace(/\s+/g,' ');
   if (!query || query.length > 180) return Response.json({products:[]},{status:400});
   const size = (url.searchParams.get('size') ?? query.match(/\bsize\s+([\w -]+)$/i)?.[1] ?? '').trim().slice(0,20);
   const requestedBudget = Number(url.searchParams.get('budget'));
   const pieceCount = Number(url.searchParams.get('pieces'));
   const range = priceWindow(requestedBudget,Number.isInteger(pieceCount) && pieceCount >= 1 && pieceCount <= 4 ? pieceCount : 1);
-  const cacheUrl = new URL('/api/products',url.origin);
-  cacheUrl.search = new URLSearchParams({v:'retailers',q:query.toLowerCase(),size:size.toLowerCase(),min:String(range?.min ?? ''),max:String(range?.max ?? '')});
-  const cacheKey = new Request(cacheUrl);
-  const cached = await caches.default.match(cacheKey);
-  if (cached) return cached;
   try {
     const [direct, provider] = await Promise.all([
       directProducts(query,size,range),
@@ -102,19 +97,17 @@ async function products(request, url, env, context) {
     ]);
     if (!direct.available && !provider) return Response.json({products:[],status:'unavailable'},{status:502});
     const results = rankProducts([...direct.cards,...(provider ?? [])],range);
-    const response = Response.json({products:results,status:'ok'},{headers:{'cache-control':'public, max-age=300'}});
-    context.waitUntil(caches.default.put(cacheKey,response.clone()).catch(() => {}));
-    return response;
+    return Response.json({products:results,status:'ok'},{headers:{'cache-control':'public, max-age=300'}});
   } catch {
     return Response.json({products:[]},{status:502});
   }
 }
 
 export default {
-  async fetch(request, env, context) {
+  async fetch(request, env) {
     const url = new URL(request.url);
     if (request.method !== 'GET' && request.method !== 'HEAD') return new Response('Method not allowed',{status:405});
-    if (url.pathname === '/api/products' && request.method === 'GET') return products(request,url,env,context);
+    if (url.pathname === '/api/products' && request.method === 'GET') return products(url,env);
     const path = url.pathname === '/index.html' ? '/' : url.pathname;
     const asset = Object.hasOwn(assets,path) ? assets[path] : undefined;
     if (!asset) return new Response('Not found',{status:404});

@@ -55,6 +55,7 @@ function matchesGarment(term, title, category = '') {
   if (/\bkurta\b/i.test(term)) return /\bkurtas?\b/i.test(description);
   if (/\bsalwar suits?\b/i.test(term)) return /\b(?:salwar|suit set|kurta set)\b/i.test(description);
   if (/\bsuits?\b/i.test(term)) return /\b(?:suits?|tuxedos?)\b/i.test(description) && !/\bsuit (?:cover|bag|hanger)\b/i.test(description);
+  if (/\boutfits?\b/i.test(term)) return /\b(?:kurta|suit|sherwani|blazer|dress|shirt|trousers|pants|lehenga|saree|sari|jumpsuit|skirt|co[- ]ord|tuxedo|pyjama|apparel)s?\b/i.test(description);
   return true;
 }
 
@@ -63,6 +64,7 @@ function myntraListings(html, size, term) {
   if (!Array.isArray(results?.products)) return undefined;
   return results.products.flatMap(item => {
     if (!item.landingPageUrl || !item.productName || !matchesGarment(term,item.productName,item.category)) return [];
+    if (/\boutfits?\b/i.test(term) && item.masterCategory?.typeName !== 'Apparel') return [];
     const target = productUrl(new URL(item.landingPageUrl,'https://www.myntra.com/').href);
     if (!target || target.retailer !== 'Myntra') return [];
     const stock = (item.inventoryInfo ?? []).filter(entry => entry.available && entry.inventory !== 0);
