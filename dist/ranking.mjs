@@ -14,16 +14,37 @@ function reviewScore({rating,reviews}) {
   return (rating*reviews+4*20)/(reviews+20);
 }
 
-export function rankProducts(products, range, limit = resultLimit) {
+export function rankProducts(products, range, limit = resultLimit, mixRetailers = false) {
   const sorted = products.filter(({rating,reviews,price}) =>
-    Number.isFinite(rating) && rating > 0 && rating <= 5 &&
+    Number.isFinite(rating) && rating >= (mixRetailers ? 4 : 1) && rating <= 5 &&
     Number.isInteger(reviews) && reviews > 0 &&
     (!range || (Number.isFinite(price) && price >= range.min && price <= range.max)))
     .sort((a,b) => reviewScore(b)-reviewScore(a) || b.reviews-a.reviews || b.rating-a.rating);
   const seen = new Set();
-  return sorted.filter(product => {
-    if (seen.has(product.url)) return false;
+  const titles = new Set();
+  const unique = sorted.filter(product => {
+    const title = product.title?.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+    const variant = title && product.retailer+'|'+title;
+    if (seen.has(product.url) || (mixRetailers && variant && titles.has(variant))) return false;
     seen.add(product.url);
+    if (variant) titles.add(variant);
     return true;
-  }).slice(0,limit);
+  });
+  if (!mixRetailers) return unique.slice(0,limit);
+
+  const queues = new Map();
+  for (const product of unique) {
+    if (!queues.has(product.retailer)) queues.set(product.retailer,{items:[],used:0});
+    queues.get(product.retailer).items.push(product);
+  }
+  const picked = [];
+  while (picked.length < limit && queues.size) {
+    const best = [...queues.values()].reduce((first,current) =>
+      reviewScore(current.items[0])-.12*current.used > reviewScore(first.items[0])-.12*first.used ? current : first);
+    const item = best.items.shift();
+    picked.push(item);
+    best.used++;
+    if (!best.items.length) queues.delete(item.retailer);
+  }
+  return picked;
 }

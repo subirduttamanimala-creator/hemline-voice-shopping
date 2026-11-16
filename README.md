@@ -10,7 +10,7 @@ Run `python -m http.server 8000 --directory dist` and open http://localhost:8000
 
 Hemline builds searches from the filled fields and creates separate groups when garments are joined with a plus sign. Each group links to Google Shopping, Amazon India, Flipkart, Myntra, Meesho and AJIO.
 
-**Top reviewed picks** shows up to 25 retailer products. It weighs the star rating alongside the number of reviews and only includes reviewed products in the selected price range. The search includes the requested size. Check size availability on the retailer page.
+**Top reviewed picks** shows up to 25 products rated 4 stars or higher. It weighs stars alongside review count, collapses repeated titles from the same store, and gives eligible listings from underrepresented stores room in the ranking. The price range and garment filters still apply. The search includes the requested size. Check size availability on the retailer page.
 
 | Target budget | Price buffer |
 | --- | --- |
@@ -25,7 +25,7 @@ The hosted worker reads publicly listed product information from Myntra and Flip
 
 Configure `SERPAPI_API_KEY` as a server-side Sites secret to include additional Google Shopping sources. Retailer search links remain available for stores that cannot supply reviewed product cards.
 
-When live retailer requests return no ranked products, Hemline uses a dated snapshot of reviewed Myntra and Flipkart listings for supported garments and searches it against the shopper's choices. Snapshot cards show the collection date and link to the retailer for current price and stock. The source snapshot is stored as compressed JSON in `worker/reviewed-listings.json.gz`.
+Hemline combines available live results with a dated snapshot of reviewed listings from Myntra, Flipkart, AJIO, Nykaa Fashion, Meesho and Tata CLiQ. Retailer coverage varies by garment and price. Snapshot cards show the collection date and link to the retailer for current price and stock. The source data is stored in `worker/reviewed-listings.json.gz` and `worker/additional-reviewed-listings.json`.
 
 Run `node worker/build.mjs` to build the Sites Worker. The build packages browser assets and the worker into `dist/server/index.js`.
 

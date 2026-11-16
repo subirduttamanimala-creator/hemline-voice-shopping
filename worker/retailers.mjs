@@ -84,7 +84,7 @@ function snapshotProducts(query, size, range) {
     if (status === 'different') return [];
     return [{...item,sizeStatus:status,snapshotDate:snapshot.asOf}];
   });
-  return rankProducts(matches,range);
+  return matches;
 }
 
 function myntraListings(html, size, term) {

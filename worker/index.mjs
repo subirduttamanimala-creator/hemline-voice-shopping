@@ -95,11 +95,12 @@ async function products(url, env) {
       directProducts(query,size,range),
       env.SERPAPI_API_KEY ? liveProducts(query,range,env.SERPAPI_API_KEY).catch(() => null) : null
     ]);
-    const results = rankProducts([...direct.cards,...(provider ?? [])],range);
-    if (results.length) return Response.json({products:results,status:'ok'},{headers:{'cache-control':'public, max-age=300'}});
-    const recorded = snapshotProducts(query,size,range);
-    const status = recorded.length ? 'snapshot' : direct.available || provider ? 'ok' : 'unavailable';
-    return Response.json({products:recorded,status},{headers:{'cache-control':'public, max-age:300'}});
+    const live = [...direct.cards,...(provider ?? [])];
+    const liveUrls = new Set(live.map(product => product.url));
+    const recorded = snapshotProducts(query,size,range).filter(product => !liveUrls.has(product.url));
+    const results = rankProducts([...live,...recorded],range,resultLimit,true);
+    const status = results.length || direct.available || provider ? 'ok' : 'unavailable';
+    return Response.json({products:results,status},{headers:{'cache-control':'public, max-age=300'}});
   } catch {
     return Response.json({products:[]},{status:502});
   }

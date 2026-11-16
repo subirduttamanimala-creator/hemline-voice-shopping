@@ -148,13 +148,13 @@ form.addEventListener('submit', async event => {
   for (const query of terms) makeSection(query,range);
   const listings = await Promise.all(terms.map(term => getListings(term,budget,terms.length,details.size,search.signal)));
   if (search.signal.aborted) return;
-  const products = rankProducts(listings.flatMap(entry => entry.products),range);
+  const products = listings.length === 1 ? listings[0].products : rankProducts(listings.flatMap(entry => entry.products),range,resultLimit,true);
   rankedList.append(...products.map(renderProduct));
   const rangeText = range ? currency.format(range.min)+'–'+currency.format(range.max)+(terms.length > 1 ? ' per piece. ' : '. ') : '';
   if (products.length) {
     const stores = [...new Set(products.map(item => item.retailer))].join(', ');
     const recorded = products.some(item => item.snapshotDate) ? ' Some listings use recorded prices and ratings.' : '';
-    resultStatus.textContent = rangeText+products.length+' ranked '+(products.length === 1 ? 'pick' : 'picks')+' from '+stores+' (up to '+resultLimit+').'+recorded+' Check the current price and size with the retailer.';
+    resultStatus.textContent = rangeText+products.length+' ranked '+(products.length === 1 ? 'pick' : 'picks')+' from '+stores+'. All have at least 4 stars. Rankings weigh review count and include multiple stores when matches are available.'+recorded+' Check the current price and size with the retailer.';
   } else if (listings.some(entry => entry.status === 'ok')) {
     resultStatus.textContent = rangeText+'No reviewed products matched this search. Try a different target budget or open a retailer below.';
   } else {

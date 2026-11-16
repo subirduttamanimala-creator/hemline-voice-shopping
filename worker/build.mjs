@@ -20,6 +20,8 @@ const entries = await Promise.all(Object.entries(staticFiles).map(async ([path,f
 const source = await readFile(new URL('./index.mjs',import.meta.url),'utf8');
 const retailers = await readFile(new URL('./retailers.mjs',import.meta.url),'utf8');
 const snapshot = JSON.parse(gunzipSync(await readFile(new URL('./reviewed-listings.json.gz',import.meta.url))));
+const additionalListings = JSON.parse(await readFile(new URL('./additional-reviewed-listings.json',import.meta.url),'utf8'));
+snapshot.products.push(...additionalListings);
 const ranking = (await readFile(new URL('../dist/ranking.mjs',import.meta.url),'utf8')).replace(/^export /gm,'');
 const output = new URL('../dist/server/',import.meta.url);
 await mkdir(output,{recursive:true});
