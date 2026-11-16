@@ -17,7 +17,8 @@ const entries = await Promise.all(Object.entries(staticFiles).map(async ([path,f
   return [path,{content,type,binary}];
 }));
 const source = await readFile(new URL('./index.mjs',import.meta.url),'utf8');
+const retailers = await readFile(new URL('./retailers.mjs',import.meta.url),'utf8');
 const ranking = (await readFile(new URL('../dist/ranking.mjs',import.meta.url),'utf8')).replace(/^export /gm,'');
 const output = new URL('../dist/server/',import.meta.url);
 await mkdir(output,{recursive:true});
-await writeFile(new URL('index.js',output),'const assets = '+JSON.stringify(Object.fromEntries(entries))+';\n'+ranking+'\n'+source);
+await writeFile(new URL('index.js',output),'const assets = '+JSON.stringify(Object.fromEntries(entries))+';\n'+ranking+'\n'+retailers+'\n'+source);

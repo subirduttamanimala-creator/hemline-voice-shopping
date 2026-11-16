@@ -21,7 +21,9 @@ Hemline builds searches from the filled fields and creates separate groups when 
 
 For a multi-piece search, Hemline divides the adjusted outfit budget equally across the requested pieces.
 
-The hosted worker can return product photos, prices and ratings from SerpApi Google Shopping results. It resolves Google product records to direct retailer offers when available and checks that each link points to a supported retailer's product page. Configure `SERPAPI_API_KEY` as a **server-side Sites secret** to enable this mode. Without it, the page opens retailer searches for current results. Ratings, stock, and current prices are confirmed on the product page.
+The hosted worker reads publicly listed product information from Myntra and Flipkart. It checks prices, ratings, direct product links and size information when retailers provide it. Up to 25 matches appear above the retailer links. A search can return fewer if products have no reviews, fall outside the range or have a known size mismatch. Confirm current stock and price on the retailer product page.
+
+Configure `SERPAPI_API_KEY` as a server-side Sites secret to include additional Google Shopping sources. Retailer search links remain available for stores that cannot supply reviewed product cards.
 
 Run `node worker/build.mjs` to build the Sites Worker. The build packages browser assets and the worker into `dist/server/index.js`.
 

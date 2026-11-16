@@ -86,18 +86,23 @@ async function liveProducts(query, range, key) {
 async function products(request, url, env, context) {
   const query = (url.searchParams.get('q') ?? '').trim().replace(/\s+/g,' ');
   if (!query || query.length > 180) return Response.json({products:[]},{status:400});
-  if (!env.SERPAPI_API_KEY) return Response.json({products:[],status:'unconfigured'});
+  const size = (url.searchParams.get('size') ?? query.match(/\bsize\s+([\w -]+)$/i)?.[1] ?? '').trim().slice(0,20);
   const requestedBudget = Number(url.searchParams.get('budget'));
   const pieceCount = Number(url.searchParams.get('pieces'));
   const range = priceWindow(requestedBudget,Number.isInteger(pieceCount) && pieceCount >= 1 && pieceCount <= 4 ? pieceCount : 1);
   const cacheUrl = new URL('/api/products',url.origin);
-  cacheUrl.search = new URLSearchParams({q:query.toLowerCase(),min:String(range?.min ?? ''),max:String(range?.max ?? '')});
+  cacheUrl.search = new URLSearchParams({v:'retailers',q:query.toLowerCase(),size:size.toLowerCase(),min:String(range?.min ?? ''),max:String(range?.max ?? '')});
   const cacheKey = new Request(cacheUrl);
   const cached = await caches.default.match(cacheKey);
   if (cached) return cached;
   try {
-    const results = await liveProducts(query,range,env.SERPAPI_API_KEY);
-    const response = Response.json({products:results,status:'ok'},{headers:{'cache-control':'public, max-age=600'}});
+    const [direct, provider] = await Promise.all([
+      directProducts(query,size,range),
+      env.SERPAPI_API_KEY ? liveProducts(query,range,env.SERPAPI_API_KEY).catch(() => null) : null
+    ]);
+    if (!direct.available && !provider) return Response.json({products:[],status:'unavailable'},{status:502});
+    const results = rankProducts([...direct.cards,...(provider ?? [])],range);
+    const response = Response.json({products:results,status:'ok'},{headers:{'cache-control':'public, max-age=300'}});
     context.waitUntil(caches.default.put(cacheKey,response.clone()).catch(() => {}));
     return response;
   } catch {

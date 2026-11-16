@@ -81,10 +81,11 @@ function renderProduct(product, index) {
   body.append(element('span',price));
   if (Number.isFinite(product.rating)) {
     const count = Number.isFinite(product.reviews) ? ' · '+product.reviews.toLocaleString('en-IN')+' ratings' : '';
-    body.append(element('span','★ '+product.rating+count,'merchant'));
+    body.append(element('span','★ '+product.rating.toFixed(1)+count,'merchant'));
   } else {
     body.append(element('span','See reviews on retailer site','merchant'));
   }
+  if (product.sizeStatus) body.append(element('span',product.sizeStatus === 'matched' ? 'Requested size listed' : 'Check size on retailer site','merchant'));
   link.append(body);
   item.append(link);
   return item;
@@ -106,10 +107,10 @@ function makeSection(query, range) {
   resultList.append(section);
 }
 
-async function getListings(query, budget, pieces, signal) {
+async function getListings(query, budget, pieces, size, signal) {
   try {
     const url = new URL('./api/products',location.href);
-    url.search = new URLSearchParams({q:query,budget:budget || '',pieces});
+    url.search = new URLSearchParams({q:query,budget:budget || '',pieces,size});
     const response = await fetch(url,{signal});
     if (!response.ok) return {products:[],status:'unavailable'};
     const body = await response.json();
@@ -144,15 +145,14 @@ form.addEventListener('submit', async event => {
   resultStatus.textContent = 'Looking for product listings. You can also open a store search below.';
   byId('results-title').focus();
   for (const query of terms) makeSection(query,range);
-  const listings = await Promise.all(terms.map(term => getListings(term,budget,terms.length,search.signal)));
+  const listings = await Promise.all(terms.map(term => getListings(term,budget,terms.length,details.size,search.signal)));
   if (search.signal.aborted) return;
   const products = rankProducts(listings.flatMap(entry => entry.products),range);
   rankedList.append(...products.map(renderProduct));
   const rangeText = range ? currency.format(range.min)+'–'+currency.format(range.max)+(terms.length > 1 ? ' per piece. ' : '. ') : '';
   if (products.length) {
-    resultStatus.textContent = rangeText+'Showing '+products.length+' of up to '+resultLimit+' picks, ranked by rating and number of reviews. Confirm size availability with the retailer.';
-  } else if (listings.every(entry => entry.status === 'unconfigured')) {
-    resultStatus.textContent = rangeText+'On-site product listings require a connected shopping provider. Use the retailer searches below for current options.';
+    const stores = [...new Set(products.map(item => item.retailer))].join(', ');
+    resultStatus.textContent = rangeText+products.length+' ranked '+(products.length === 1 ? 'pick' : 'picks')+' from '+stores+' (up to '+resultLimit+'). Confirm current size availability with the retailer.';
   } else if (listings.some(entry => entry.status === 'ok')) {
     resultStatus.textContent = rangeText+'No reviewed products matched this search. Try a different target budget or open a retailer below.';
   } else {
